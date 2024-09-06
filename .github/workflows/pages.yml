@@ -32,6 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: action/checkout@v4
+      
       - name: Build with blog-static
         run: |
           mkdir ./.public
