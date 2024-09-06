@@ -1,3 +1,3 @@
 # COSMIC Utils
 
-An organization containing third party utilities for the COSMIC™ Desktop made by System 76.
+An unofficial organization containing third party apps and applets for the COSMIC™ Desktop made by System 76.
