@@ -2,7 +2,7 @@
 
 ## Applications
 
-![Calculator Logo](/res/dev.edfloreshz.Calculator.svg)
+![app-icon](/res/dev.edfloreshz.Calculator.svg)
 
 **Calculator**: A simple calculator for the COSMIC™ desktop.  
 [Github](https://github.com/cosmic-utils/calculator?tab=readme-ov-file)
@@ -17,4 +17,5 @@
 
 ## Applets
 
-- Ollama :  Ollama applet for COSMIC Desktop 
+**Ollama**:  Ollama applet for COSMIC Desktop  
+[Github](https://github.com/cosmic-utils/cosmic-ext-applet-ollama)

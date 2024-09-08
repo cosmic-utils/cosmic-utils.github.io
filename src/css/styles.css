@@ -181,11 +181,15 @@ footer a,footer a:visited{
         color:#9f9f9f
     }
     
-    footer img{
+    /* footer img{
         filter:invert(87%)
-    }
+    } */
     
     .error-text{
         color:#cf6679
     }
+}
+
+img[alt=app-icon] {
+    width: 200px;
 }
