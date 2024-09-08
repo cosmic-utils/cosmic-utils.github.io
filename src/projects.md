@@ -1,6 +1,12 @@
-Applications include:
+# Projects
 
-- Calculator:  A simple calculator for the COSMIC™ desktop.
+## Applications
+
+<img src="/res/dev.edfloreshz.Calculator.svg" alt="Calculator Logo" width="200"/>
+
+**Calculator**: A simple calculator for the COSMIC™ desktop.  
+[Github](https://github.com/cosmic-utils/calculator?tab=readme-ov-file)
+
 - Tasks:  A simple task management application for the COSMIC™ desktop. 
 - Stellarshot:  A simple backup application using Rustic for the COSMIC™ desktop.
 - Weather:  Weather app written in Rust and libcosmic.
@@ -9,6 +15,6 @@ Applications include:
 - WebApps:  Web applications at your fingertips.
 - Wizard: deb packages installer made with magic for the COSMIC™ desktop! 
 
-Applets include:
+## Applets
 
 - Ollama :  Ollama applet for COSMIC Desktop 
