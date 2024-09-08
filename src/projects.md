@@ -2,7 +2,7 @@
 
 ## Applications
 
-<img src="/res/dev.edfloreshz.Calculator.svg" alt="Calculator Logo" width="200"/>
+![Calculator Logo](/res/dev.edfloreshz.Calculator.svg)
 
 **Calculator**: A simple calculator for the COSMIC™ desktop.  
 [Github](https://github.com/cosmic-utils/calculator?tab=readme-ov-file)
