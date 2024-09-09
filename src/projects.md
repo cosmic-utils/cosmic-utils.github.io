@@ -22,13 +22,23 @@
 **Forecast**: Weather app written in Rust and libcosmic.  
 [Github](https://github.com/cosmic-utils/forecast)
 
-**Examime**: A system information viewer for the COSMIC™ desktop.
+![app-icon](/res/page.codeberg.sungsphinx.Examine.svg)
 
-**Tweaks for COSMIC™**: A tweaking tool for the COSMIC™ desktop.
+**Examime**: A system information viewer for the COSMIC™ desktop.  
+[Github](https://github.com/cosmic-utils/examine)
 
-**WebApps**: Web applications at your fingertips.
+![app-icon](/res/dev.edfloreshz.CosmicTweaks.svg)
 
-**Wizard**: deb packages installer made with magic for the COSMIC™ desktop!
+**Tweaks for COSMIC™**: A tweaking tool for the COSMIC™ desktop.  
+[Github](https://github.com/cosmic-utils/tweaks)
+
+![app-icon](/res/io.github.elevenhsoft.WebApps.svg)
+
+**WebApps**: Web applications at your fingertips.  
+[Github](https://github.com/cosmic-utils/web-apps)
+
+**Wizard**: deb packages installer made with magic for the COSMIC™ desktop!  
+[Github](https://github.com/cosmic-utils/wizard)
 
 ## Applets
 
