@@ -192,5 +192,5 @@ footer a,footer a:visited{
 
 img[alt=app-icon] {
     width: 100px;
-    vertical-align: sub;
+    vertical-align: text-bottom;
 }
