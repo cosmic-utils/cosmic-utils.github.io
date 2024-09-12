@@ -191,6 +191,7 @@ footer a,footer a:visited{
 }
 
 img[alt=app-icon] {
+    display: inline;
     width: 100px;
-    vertical-align: text-bottom;
+    vertical-align: text-top;
 }
