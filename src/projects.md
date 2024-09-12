@@ -2,45 +2,22 @@
 
 ## Applications
 
-![app-icon](/res/dev.edfloreshz.Calculator.svg)
+![app-icon](/res/dev.edfloreshz.Calculator.svg) **Calculator**: A simple calculator for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/calculator?tab=readme-ov-file)
 
-**Calculator**: A simple calculator for the COSMIC™ desktop.  
-[Github](https://github.com/cosmic-utils/calculator?tab=readme-ov-file)
+![app-icon](/res/dev.edfloreshz.Tasks.svg) **Tasks**: A simple task management application for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/tasks)
 
-![app-icon](/res/dev.edfloreshz.Tasks.svg)
+![app-icon](/res/com.github.ahoneybun.Stellarshot.svg) **Stellarshot**: A simple backup application using Rustic for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/stellarshot)
 
-**Tasks**: A simple task management application for the COSMIC™ desktop.  
-[Github](https://github.com/cosmic-utils/tasks)
+![app-icon](/res/com.jwestall.Forecast.svg) **Forecast**: Weather app written in Rust and libcosmic. [Source on Github](https://github.com/cosmic-utils/forecast)
 
-![app-icon](/res/com.github.ahoneybun.Stellarshot.svg)
+![app-icon](/res/page.codeberg.sungsphinx.Examine.svg) **Examime**: A system information viewer for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/examine)
 
-**Stellarshot**: A simple backup application using Rustic for the COSMIC™ desktop.  
-[Github](https://github.com/cosmic-utils/stellarshot)
+![app-icon](/res/dev.edfloreshz.CosmicTweaks.svg) **Tweaks for COSMIC™**: A tweaking tool for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/tweaks)
 
-![app-icon](/res/com.jwestall.Forecast.svg)
+![app-icon](/res/io.github.elevenhsoft.WebApps.svg) **WebApps**: Web applications at your fingertips. [Source on Github](https://github.com/cosmic-utils/web-apps)
 
-**Forecast**: Weather app written in Rust and libcosmic.  
-[Github](https://github.com/cosmic-utils/forecast)
-
-![app-icon](/res/page.codeberg.sungsphinx.Examine.svg)
-
-**Examime**: A system information viewer for the COSMIC™ desktop.  
-[Github](https://github.com/cosmic-utils/examine)
-
-![app-icon](/res/dev.edfloreshz.CosmicTweaks.svg)
-
-**Tweaks for COSMIC™**: A tweaking tool for the COSMIC™ desktop.  
-[Github](https://github.com/cosmic-utils/tweaks)
-
-![app-icon](/res/io.github.elevenhsoft.WebApps.svg)
-
-**WebApps**: Web applications at your fingertips.  
-[Github](https://github.com/cosmic-utils/web-apps)
-
-**Wizard**: deb packages installer made with magic for the COSMIC™ desktop!  
-[Github](https://github.com/cosmic-utils/wizard)
+**Wizard**: deb packages installer made with magic for the COSMIC™ desktop! [Source on Github](https://github.com/cosmic-utils/wizard)
 
 ## Applets
 
-**Ollama**:  Ollama applet for COSMIC Desktop  
-[Github](https://github.com/cosmic-utils/cosmic-ext-applet-ollama)
+**Ollama**:  Ollama applet for COSMIC Desktop [Source on Github](https://github.com/cosmic-utils/cosmic-ext-applet-ollama)
