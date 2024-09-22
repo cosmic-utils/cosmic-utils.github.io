@@ -10,7 +10,7 @@
 
 ![app-icon](/res/com.jwestall.Forecast.svg) **Forecast**: Weather app written in Rust and libcosmic. [Source on Github](https://github.com/cosmic-utils/forecast)
 
-![app-icon](/res/page.codeberg.sungsphinx.Examine.svg) **Examime**: A system information viewer for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/examine)
+![app-icon](/res/page.codeberg.sungsphinx.Examine.svg) **Examine**: A system information viewer for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/examine)
 
 ![app-icon](/res/dev.edfloreshz.CosmicTweaks.svg) **Tweaks for COSMIC™**: A tweaking tool for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/tweaks)
 
