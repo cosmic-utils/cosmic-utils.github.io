@@ -6,7 +6,6 @@ Applications include:
 
 - AppHub: A simple AppImage manager for the COSMIC™ desktop.
 - Calculator:  A simple calculator for the COSMIC™ desktop.
-- AppHub:  A simple AppImage installer and manager.
 - Tasks:  A simple task management application for the COSMIC™ desktop. 
 - Stellarshot:  A simple backup application using Rustic for the COSMIC™ desktop.
 - Weather:  Weather app written in Rust and libcosmic.
