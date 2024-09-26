@@ -4,6 +4,7 @@ This is not an official COSMIC™ Organization from System76. This is for hostin
 
 Applications include:
 
+- AppHub: A simple AppImage manager for the COSMIC™ desktop.
 - Calculator:  A simple calculator for the COSMIC™ desktop.
 - Tasks:  A simple task management application for the COSMIC™ desktop. 
 - Stellarshot:  A simple backup application using Rustic for the COSMIC™ desktop.
