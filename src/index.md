@@ -8,6 +8,7 @@ Community driven applications and extensions written to extend the power of the 
 | - | - |
 | ![app-icon](/res/dev.edfloreshz.Calculator.svg) | **Calculator**: A simple calculator for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/calculator?tab=readme-ov-file) |
 | ![app-icon](/res/app-hub.svg) | **AppHub**: A simple AppImage installer and manager. [Source on Github](https://github.com/cosmic-utils/AppHub?tab=readme-ov-file) |
+| ![app-icon](/res/Chronos.svg) | **Chronos**: Chronos is a simple and intuitive Pomodoro timer for Linux. [Source on Github](https://github.com/cosmic-utils/Chronos?tab=readme-ov-file) |
 | ![app-icon](/res/dev.edfloreshz.Tasks.svg) | **Tasks**: A simple task management application for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/tasks) |
 | ![app-icon](/res/com.github.ahoneybun.Stellarshot.svg) | **Stellarshot**: A simple backup application using Rustic for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/stellarshot) |
 | ![app-icon](/res/com.jwestall.Forecast.svg) | **Forecast**: Weather app written in Rust and libcosmic. [Source on Github](https://github.com/cosmic-utils/forecast) |
