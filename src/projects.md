@@ -6,6 +6,8 @@
 
 ![app-icon](/res/app-hub.svg) **AppHub**: A simple AppImage installer and manager. [Source on Github](https://github.com/cosmic-utils/AppHub)
 
+![app-icon](/res/Chronos.svg) **Chronos**: Chronos is a simple and intuitive Pomodoro timer for Linux. [Source on Github](https://github.com/cosmic-utils/Chronos)
+
 ![app-icon](/res/dev.edfloreshz.Tasks.svg) **Tasks**: A simple task management application for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/tasks)
 
 ![app-icon](/res/com.github.ahoneybun.Stellarshot.svg) **Stellarshot**: A simple backup application using Rustic for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/stellarshot)
