@@ -17,7 +17,8 @@ Applications include:
 
 Applets include:
 
-- Ollama :  Ollama applet for COSMIC Desktop 
+- Ollama :  Ollama applet for COSMIC Desktop
+- clipboard-manager :  Clipboard manager for COSMIC™ 
 
 <!--
 
