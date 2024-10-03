@@ -4,7 +4,7 @@
 
 ![app-icon](/res/dev.edfloreshz.Calculator.svg) **Calculator**: A simple calculator for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/calculator?tab=readme-ov-file)
 
-![app-icon](/res/app-hub.svg) **AppHub**: A simple AppImage installer and manager. [Source on Github](https://github.com/cosmic-utils/AppHub)
+![app-icon](/res/app-hub.png) **AppHub**: A simple AppImage installer and manager. [Source on Github](https://github.com/cosmic-utils/AppHub)
 
 ![app-icon](/res/Chronos.svg) **Chronos**: Chronos is a simple and intuitive Pomodoro timer for Linux. [Source on Github](https://github.com/cosmic-utils/Chronos)
 
