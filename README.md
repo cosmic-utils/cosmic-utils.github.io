@@ -18,7 +18,8 @@ Applications include:
 Applets include:
 
 - Ollama :  Ollama applet for COSMIC Desktop
-- clipboard-manager :  Clipboard manager for COSMIC™ 
+- clipboard-manager :  Clipboard manager for COSMIC™
+- gui-scale-applet : COSMIC™ applet for Tailscale
 
 <!--
 
