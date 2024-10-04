@@ -19,8 +19,9 @@ Community driven applications and extensions written to extend the power of the 
 
 ## Applets
 
-**Ollama**:  Ollama applet for COSMIC Desktop [Source on Github](https://github.com/cosmic-utils/cosmic-ext-applet-ollama)
-**clipboard-manager** :  Clipboard manager for COSMIC™ [Source on Github](https://github.com/cosmic-utils/clipboard-manager)
+**Ollama**:  Ollama applet for COSMIC Desktop [Source on Github](https://github.com/cosmic-utils/cosmic-ext-applet-ollama)  
+**clipboard-manager** :  Clipboard manager for COSMIC™ [Source on Github](https://github.com/cosmic-utils/clipboard-manager)  
+![app-icon](/res/tailscale-icon.png) **gui-scale-applet** : COSMIC™ applet for Tailscale [Source on Github](https://github.com/cosmic-utils/gui-scale-applet) 
 
 ## Contributing
 
