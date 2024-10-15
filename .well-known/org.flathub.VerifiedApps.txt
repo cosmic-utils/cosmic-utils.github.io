@@ -1,0 +1,4 @@
+# Flathub Website Verification (if application/applet id starts with io.github.cosmic_utils)
+
+# io.github.cosmic_utils.Examine
+313cc2bb-ca70-424a-a3d2-bf5abe4e1abd
