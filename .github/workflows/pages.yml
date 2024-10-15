@@ -40,7 +40,6 @@ jobs:
           chmod +x ./blog-static
           ./blog-static ./src ./.public 'COSMIC Utils'
           mv ./.public ./public
-          mv ./.well-known ./public
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
