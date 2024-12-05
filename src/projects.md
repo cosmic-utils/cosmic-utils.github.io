@@ -20,6 +20,7 @@
 
 ![app-icon](/res/io.github.elevenhsoft.WebApps.svg) **WebApps**: Web applications at your fingertips. [Source on Github](https://github.com/cosmic-utils/web-apps)
 
+![app-icon](/res/icons/hicolor/scalable/apps/icon.svg) **Observatory**: An in-development system monitor application for the COSMIC desktop environment. [Source on Github](https://github.com/cosmic-utils/observatory)
 
 **Wizard**: deb packages installer made with magic for the COSMIC™ desktop! [Source on Github](https://github.com/cosmic-utils/wizard)
 
