@@ -14,7 +14,7 @@ Applications include:
 - Tweaks for COSMIC™: A tweaking tool for the COSMIC™ desktop.
 - WebApps:  Web applications at your fingertips.
 - Wizard: deb packages installer made with magic for the COSMIC™ desktop!
-- observatory: An in-development system monitor application for the COSMIC desktop environment
+- Observatory: An in-development system monitor application for the COSMIC desktop environment
 
 Applets include:
 
