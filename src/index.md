@@ -16,6 +16,7 @@ Community driven applications and extensions written to extend the power of the 
 | ![app-icon](/res/dev.edfloreshz.CosmicTweaks.svg) | **Tweaks for COSMIC™**: A tweaking tool for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/tweaks) |
 | ![app-icon](/res/io.github.elevenhsoft.WebApps.svg) | **WebApps**: Web applications at your fingertips. [Source on Github](https://github.com/cosmic-utils/web-apps) |
 | | **Wizard**: deb packages installer made with magic for the COSMIC™ desktop! [Source on Github](https://github.com/cosmic-utils/wizard) |
+| ![app-icon](/res/icons/hicolor/scalable/apps/icon.svg) **Observatory**: An in-development system monitor application for the COSMIC desktop environment. [Source on Github](https://github.com/cosmic-utils/observatory) |
 
 ## Applets
 
