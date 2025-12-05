@@ -15,6 +15,7 @@ Community driven applications and extensions written to extend the power of the 
 | ![app-icon](/res/page.codeberg.sungsphinx.Examine.svg) | **Examine**: A system information viewer for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/examine) |
 | ![app-icon](/res/dev.edfloreshz.CosmicTweaks.svg) | **Tweaks for COSMIC™**: A tweaking tool for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/tweaks) |
 | ![app-icon](/res/io.github.elevenhsoft.WebApps.svg) | **WebApps**: Web applications at your fingertips. [Source on Github](https://github.com/cosmic-utils/web-apps) |
+| ![app-icon](/res/io.github.cosmic_utils.camera.svg) | **Camera**: A camera application for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/camera) |
 | | **Wizard**: deb packages installer made with magic for the COSMIC™ desktop! [Source on Github](https://github.com/cosmic-utils/wizard) |
 | ![app-icon](/res/icons/hicolor/scalable/apps/icon.svg) **Observatory**: An in-development system monitor application for the COSMIC desktop environment. [Source on Github](https://github.com/cosmic-utils/observatory) |
 
