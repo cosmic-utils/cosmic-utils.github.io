@@ -2,3 +2,6 @@
 
 # io.github.cosmic_utils.Examine
 313cc2bb-ca70-424a-a3d2-bf5abe4e1abd
+
+# io.github.cosmic_utils.camera
+f395e9d5-6a4d-4db0-a409-d1dc924a78c6
