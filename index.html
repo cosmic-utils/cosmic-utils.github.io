@@ -1,766 +1,1484 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COSMIC Utilities - Community Utilities for the COSMIC™ Desktop</title>
-    <meta name="description" content="Community-driven collection of applications and applets for the COSMIC™ Desktop Environment">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        cosmic: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        }
-                    }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>COSMIC Utilities</title>
+        <meta
+            name="description"
+            content="Community-driven collection of applications and applets for the COSMIC™ Desktop Environment"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "cosmic-theme": "#ffad00",
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-20px);
                 }
             }
-        }
-    </script>
-    <style>
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        .float-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-    </style>
-</head>
-<body class="bg-gradient-to-br from-slate-50 via-teal-50 to-cyan-50 min-h-screen">
-    <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-                        </svg>
+            .float-animation {
+                animation: float 6s ease-in-out infinite;
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow:
+                    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+        </style>
+    </head>
+    <body class="bg-slate-50 min-h-screen">
+        <!-- Header -->
+        <header
+            class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50"
+        >
+            <nav class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div
+                            class="w-10 h-10 bg-cosmic-theme rounded-lg flex items-center justify-center"
+                        >
+                            <svg
+                                class="w-6 h-6 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                                />
+                            </svg>
+                        </div>
+                        <h1 class="text-2xl font-bold text-gray-800">
+                            COSMIC Utilities
+                        </h1>
                     </div>
-                    <h1 class="text-2xl font-bold text-gray-800">COSMIC Utilities</h1>
+                    <div class="flex items-center space-x-6">
+                        <a
+                            href="#applications"
+                            class="text-gray-600 hover:text-cosmic-theme transition"
+                            >Applications</a
+                        >
+                        <a
+                            href="#applets"
+                            class="text-gray-600 hover:text-cosmic-theme transition"
+                            >Applets</a
+                        >
+                        <a
+                            href="https://github.com/cosmic-utils"
+                            target="_blank"
+                            class="inline-flex items-center space-x-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
+                        >
+                            <svg
+                                class="w-5 h-5"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    clip-rule="evenodd"
+                                />
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="flex items-center space-x-6">
-                    <a href="#applications" class="text-gray-600 hover:text-teal-600 transition">Applications</a>
-                    <a href="#applets" class="text-gray-600 hover:text-teal-600 transition">Applets</a>
-                    <a href="https://github.com/cosmic-utils" target="_blank" class="inline-flex items-center space-x-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="container mx-auto px-4 py-20">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-block mb-4">
+                    <span
+                        class="bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full"
+                        >Community Project</span
+                    >
+                </div>
+                <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                    Utilities for the
+                    <span class="text-cosmic-theme">COSMIC™</span> Desktop
+                </h2>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    A community-driven collection of applications and applets
+                    designed to enhance your COSMIC™ Desktop experience. Built
+                    with Rust and libcosmic.
+                </p>
+                <div
+                    class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                >
+                    <a
+                        href="#applications"
+                        class="inline-flex items-center px-8 py-4 bg-cosmic-theme text-white font-semibold rounded-xl hover:bg-opacity-90 transition transform hover:scale-105 shadow-lg"
+                    >
+                        <span>Explore Applications</span>
+                        <svg
+                            class="w-5 h-5 ml-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6"
+                            />
                         </svg>
-                        <span></span>GitHub</span>
+                    </a>
+                    <a
+                        href="https://github.com/cosmic-utils"
+                        target="_blank"
+                        class="inline-flex items-center px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl hover:bg-gray-50 transition border-2 border-gray-200 shadow-lg"
+                    >
+                        <span>View on GitHub</span>
                     </a>
                 </div>
+                <div class="mt-8 text-sm text-gray-500">
+                    <p>
+                        ⚠️ This is not an official COSMIC™ Organization from
+                        System76
+                    </p>
+                </div>
             </div>
-        </nav>
-    </header>
+        </section>
 
-    <!-- Hero Section -->
-    <section class="container mx-auto px-4 py-20">
-        <div class="text-center max-w-4xl mx-auto">
-            <div class="inline-block mb-4">
-                <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full">Community Project</span>
+        <!-- Stats Section -->
+        <section class="container mx-auto px-4 py-12">
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto"
+            >
+                <div class="bg-white rounded-xl p-6 text-center shadow-md">
+                    <div class="text-4xl font-bold text-cosmic-theme mb-2">
+                        44+
+                    </div>
+                    <div class="text-gray-600">Repositories</div>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-md">
+                    <div class="text-4xl font-bold text-cosmic-theme mb-2">
+                        20+
+                    </div>
+                    <div class="text-gray-600">Applications</div>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-md">
+                    <div class="text-4xl font-bold text-emerald-600 mb-2">
+                        10+
+                    </div>
+                    <div class="text-gray-600">Applets</div>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-md">
+                    <div class="text-4xl font-bold text-sky-600 mb-2">311+</div>
+                    <div class="text-gray-600">Followers</div>
+                </div>
             </div>
-            <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                Utilities for the <span class="gradient-text">COSMIC™</span> Desktop
-            </h2>
-            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                A community-driven collection of applications and applets designed to enhance your COSMIC™ Desktop experience. Built with Rust and libcosmic.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#applications" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-teal-700 hover:to-cyan-700 transition transform hover:scale-105 shadow-lg">
-                    <span></span>Explore Applications</span>
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                    </svg>
-                </a>
-                <a href="https://github.com/cosmic-utils" target="_blank" class="inline-flex items-center px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl hover:bg-gray-50 transition border-2 border-gray-200 shadow-lg">
-                    <span>View on GitHub</span>
-                </a>
-            </div>
-            <div class="mt-8 text-sm text-gray-500">
-                <p>⚠️ This is not an official COSMIC™ Organization from System76</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Stats Section -->
-    <section class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <div class="bg-white rounded-xl p-6 text-center shadow-md">
-                <div class="text-4xl font-bold text-teal-600 mb-2">44+</div>
-                <div class="text-gray-600">Repositories</div>
+        <!-- Applications Section -->
+        <section id="applications" class="container mx-auto px-4 py-20">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">
+                    📱 Applications
+                </h3>
+                <p class="text-xl text-gray-600">
+                    Full-featured applications for the COSMIC™ Desktop
+                </p>
             </div>
-            <div class="bg-white rounded-xl p-6 text-center shadow-md">
-                <div class="text-4xl font-bold text-cyan-600 mb-2">20+</div>
-                <div class="text-gray-600">Applications</div>
-            </div>
-            <div class="bg-white rounded-xl p-6 text-center shadow-md">
-                <div class="text-4xl font-bold text-emerald-600 mb-2">10+</div>
-                <div class="text-gray-600">Applets</div>
-            </div>
-            <div class="bg-white rounded-xl p-6 text-center shadow-md">
-                <div class="text-4xl font-bold text-sky-600 mb-2">311+</div>
-                <div class="text-gray-600">Followers</div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Applications Section -->
-    <section id="applications" class="container mx-auto px-4 py-20">
-        <div class="text-center mb-12">
-            <h3 class="text-4xl font-bold text-gray-900 mb-4">📱 Applications</h3>
-            <p class="text-xl text-gray-600">Full-featured applications for the COSMIC™ Desktop</p>
-        </div>
-
-        <!-- System & Utilities -->
-        <div class="mb-16">
-            <h4 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <span class="text-3xl mr-3">⚙️</span>
-                System & Utilities
-            </h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-2xl">
-                            <img src="https://raw.githubusercontent.com/cosmic-utils/calculator/main/res/icons/hicolor/scalable/apps/dev.edfloreshz.Calculator.svg" alt="app-icon">
+            <!-- System & Utilities -->
+            <div class="mb-16">
+                <h4
+                    class="text-2xl font-bold text-gray-800 mb-6 flex items-center"
+                >
+                    <span class="text-3xl mr-3">⚙️</span>
+                    System & Utilities
+                </h4>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme/20 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                <img
+                                    src="https://raw.githubusercontent.com/cosmic-utils/calculator/main/res/icons/hicolor/scalable/apps/dev.edfloreshz.Calculator.svg"
+                                    alt="app-icon"
+                                />
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
                         </div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Calculator</h5>
-                    <p class="text-gray-600 mb-4">A simple calculator with operations history</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/calculator" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center text-2xl">
-                            <img src="https://raw.githubusercontent.com/cosmic-utils/examine/main/res/icons/hicolor/scalable/apps/io.github.cosmic_utils.Examine.svg" alt="app-icon">
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Calculator
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            A simple calculator with operations history
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/calculator"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
                         </div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
                     </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Examine</h5>
-                    <p class="text-gray-600 mb-4">System information viewer for COSMIC™</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/examine" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
 
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-2xl">
-                            <img src="https://raw.githubusercontent.com/cosmic-utils/tweaks/main/res/icons/hicolor/scalable/apps/icon.svg" alt="app-icon">
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme/20 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                <img
+                                    src="https://raw.githubusercontent.com/cosmic-utils/examine/main/res/icons/hicolor/scalable/apps/io.github.cosmic_utils.Examine.svg"
+                                    alt="app-icon"
+                                />
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
                         </div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Examine
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            System information viewer for COSMIC™
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/examine"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
                     </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Tweaks for COSMIC™</h5>
-                    <p class="text-gray-600 mb-4">Advanced settings and features tweaking tool</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/tweaks" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
 
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-2xl">⌨️</div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                <img
+                                    src="https://raw.githubusercontent.com/cosmic-utils/tweaks/main/res/icons/hicolor/scalable/apps/icon.svg"
+                                    alt="app-icon"
+                                />
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Tweaks for COSMIC™
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Advanced settings and features tweaking tool
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/tweaks"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
                     </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">COSMIC CTL</h5>
-                    <p class="text-gray-600 mb-4">CLI for COSMIC Desktop configuration management</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/cosmic-ctl" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
 
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center text-2xl">⚙️</div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                ⌨️
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            COSMIC CTL
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            CLI for COSMIC Desktop configuration management
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/cosmic-ctl"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
                     </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Configurator</h5>
-                    <p class="text-gray-600 mb-4">dconf alternative for COSMIC Desktop</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/configurator" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
 
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-2xl">💾</div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme/20 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                ⚙️
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Configurator
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            dconf alternative for COSMIC Desktop
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/configurator"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
                     </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">COSMIC Disks</h5>
-                    <p class="text-gray-600 mb-4">Disk utility for the COSMIC Desktop</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/cosmic-ext-disks" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme/20 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                💾
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            COSMIC Disks
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Disk utility for the COSMIC Desktop
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/cosmic-ext-disks"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Productivity -->
-        <div class="mb-16">
-            <h4 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <span class="text-3xl mr-3">✅</span>
-                Productivity
-            </h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-2xl">
-                            <img src="https://raw.githubusercontent.com/cosmic-utils/tasks/main/res/icons/hicolor/scalable/apps/dev.edfloreshz.Tasks.svg" alt="app-icon">
+            <!-- Productivity -->
+            <div class="mb-16">
+                <h4
+                    class="text-2xl font-bold text-gray-800 mb-6 flex items-center"
+                >
+                    <span class="text-3xl mr-3">✅</span>
+                    Productivity
+                </h4>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                <img
+                                    src="https://raw.githubusercontent.com/cosmic-utils/tasks/main/res/icons/hicolor/scalable/apps/dev.edfloreshz.Tasks.svg"
+                                    alt="app-icon"
+                                />
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
                         </div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Tasks</h5>
-                    <p class="text-gray-600 mb-4">Simple task management application</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/tasks" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center text-2xl">📅</div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Calendar</h5>
-                    <p class="text-gray-600 mb-4">Calendar application for COSMIC™</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/calendar" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-2xl">
-                            <img src="https://raw.githubusercontent.com/cosmic-utils/chronos/main/res/icons/hicolor/scalable/apps/com.francescogaglione.chronos.svg" alt="app-icon">
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Tasks
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Simple task management application
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/tasks"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
                         </div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
                     </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Chronos</h5>
-                    <p class="text-gray-600 mb-4">Simple and intuitive Pomodoro timer</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/chronos" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Media & Viewing -->
-        <div class="mb-16">
-            <h4 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <span class="text-3xl mr-3">🎨</span>
-                Media & Viewing
-            </h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-2xl">
-                            <img src="https://raw.githubusercontent.com/cosmic-utils/forecast/main/res/icons/hicolor/scalable/apps/com.jwestall.Forecast.svg" alt="app-icon">
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme/20 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                📅
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
                         </div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Forecast</h5>
-                    <p class="text-gray-600 mb-4">Weather app written in Rust and libcosmic</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/forecast" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-2xl">🖼️</div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">COSMIC Viewer</h5>
-                    <p class="text-gray-600 mb-4">Image viewer built with libcosmic</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/cosmic-viewer" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center text-2xl">🦉</div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Noctua</h5>
-                    <p class="text-gray-600 mb-4">Image viewer for the COSMIC™ desktop</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/noctua" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-2xl">📷</div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Camera</h5>
-                    <p class="text-gray-600 mb-4">Camera application for COSMIC™</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/camera" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Networking & Communication -->
-        <div class="mb-16">
-            <h4 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <span class="text-3xl mr-3">🌐</span>
-                Networking & Communication
-            </h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-2xl">
-                            <img src="https://raw.githubusercontent.com/cosmic-utils/web-apps/master/resources/icons/hicolor/256x256/apps/dev.heppen.webapps.png" alt="app-icon">
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Calendar
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Calendar application for COSMIC™
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/calendar"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
                         </div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
                     </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">WebApps</h5>
-                    <p class="text-gray-600 mb-4">Web applications at your fingertips</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/web-apps" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
 
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-2xl">🦣</div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Toot</h5>
-                    <p class="text-gray-600 mb-4">Mastodon client for COSMIC™</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/toot" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Installation & Package Management -->
-        <div class="mb-16">
-            <h4 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <span class="text-3xl mr-3">📦</span>
-                Installation & Package Management
-            </h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center text-2xl">
-                            <img src="https://raw.githubusercontent.com/cosmic-utils/app-hub/refs/heads/master/res/icons/hicolor/scalable/apps/com.francescogaglione.apphub.png" alt="app-icon">
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                <img
+                                    src="https://raw.githubusercontent.com/cosmic-utils/chronos/main/res/icons/hicolor/scalable/apps/com.francescogaglione.chronos.svg"
+                                    alt="app-icon"
+                                />
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
                         </div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">AppHub</h5>
-                    <p class="text-gray-600 mb-4">Simple AppImage installer and manager</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/app-hub" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-2xl">🧙</div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Wizard</h5>
-                    <p class="text-gray-600 mb-4">deb packages installer made with magic</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/wizard" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-2xl">
-                            <img src="https://raw.githubusercontent.com/cosmic-utils/stellarshot/9f8a49dfaaa9bd545e852a9460e3cd99dc2c5e66/res/icons/hicolor/scalable/apps/com.github.cosmic-utils.Stellarshot.svg" alt="app-icon">
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Chronos
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Simple and intuitive Pomodoro timer
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/chronos"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
                         </div>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Stellarshot</h5>
-                    <p class="text-gray-600 mb-4">Backup app using Restic/Rustic</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/stellarshot" class="text-teal-600 hover:text-teal-800 text-sm font-medium">View Repository →</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Applets Section -->
-    <section id="applets" class="container mx-auto px-4 py-20 bg-white/50 rounded-3xl">
-        <div class="text-center mb-12">
-            <h3 class="text-4xl font-bold text-gray-900 mb-4">🔌 Applets</h3>
-            <p class="text-xl text-gray-600">Lightweight extensions for your COSMIC™ panel and dock</p>
-        </div>
-
-        <!-- System Monitoring -->
-        <div class="mb-16">
-            <h4 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <span class="text-3xl mr-3">📊</span>
-                System Monitoring
-            </h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover border-2 border-blue-100">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-orange-600 rounded-lg flex items-center justify-center text-2xl">📈</div>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Popular</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Minimon Applet</h5>
-                    <p class="text-gray-600 mb-4">Display CPU/Memory/Network/Disk/GPU usage</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/minimon-applet" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center text-2xl">💻</div>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">System Info Applet</h5>
-                    <p class="text-gray-600 mb-4">Simple system info applet for COSMIC</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/cosmic-ext-applet-sysinfo" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Utilities -->
-        <div class="mb-16">
-            <h4 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <span class="text-3xl mr-3">🛠️</span>
-                Utilities
-            </h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover border-2 border-orange-100">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-600 rounded-lg flex items-center justify-center text-2xl">📋</div>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Popular</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Clipboard Manager</h5>
-                    <p class="text-gray-600 mb-4">Clipboard manager with history</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/clipboard-manager" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center text-2xl">🔆</div>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">External Monitor Brightness</h5>
-                    <p class="text-gray-600 mb-4">Control brightness of external monitors</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/cosmic-ext-applet-external-monitor-brightness" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl">🌤️</div>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Weather Applet</h5>
-                    <p class="text-gray-600 mb-4">Simple weather info applet</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/cosmic-ext-applet-weather" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-2xl">
-                            <img src="https://raw.githubusercontent.com/cappsyco/cosmic-ext-applet-logomenu/refs/heads/main/res/logo.png" alt="app-icon">
+            <!-- Media & Viewing -->
+            <div class="mb-16">
+                <h4
+                    class="text-2xl font-bold text-gray-800 mb-6 flex items-center"
+                >
+                    <span class="text-3xl mr-3">🎨</span>
+                    Media & Viewing
+                </h4>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                <img
+                                    src="https://raw.githubusercontent.com/cosmic-utils/forecast/main/res/icons/hicolor/scalable/apps/com.jwestall.Forecast.svg"
+                                    alt="app-icon"
+                                />
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
                         </div>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Forecast
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Weather app written in Rust and libcosmic
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/forecast"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
                     </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Logo Menu</h5>
-                    <p class="text-gray-600 mb-4">Logo Menu applet for COSMIC™</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/cosmic-ext-applet-logomenu" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
 
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-2xl">💾</div>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme/20 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                🖼️
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            COSMIC Viewer
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Image viewer built with libcosmic
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/cosmic-viewer"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
                     </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Drives Applet</h5>
-                    <p class="text-gray-600 mb-4">Monitor your drives from the panel</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/cosmic-ext-applet-drives" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
 
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-2xl">📖</div>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme/20 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                🦉
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Noctua
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Image viewer for the COSMIC™ desktop
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/noctua"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
                     </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Dictionary Applet</h5>
-                    <p class="text-gray-600 mb-4">English dictionary applet</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/cosmic-ext-applet-dict" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Networking -->
-        <div class="mb-16">
-            <h4 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <span class="text-3xl mr-3">🌐</span>
-                Networking
-            </h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-2xl">🔒</div>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Tailscale Applet</h5>
-                    <p class="text-gray-600 mb-4">COSMIC™ applet for Tailscale</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/gui-scale-applet" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-2xl">🔗</div>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">COSMIC Connect</h5>
-                    <p class="text-gray-600 mb-4">KDE Connect functionality for COSMIC</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/cosmic-connect-applet" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- AI & Development -->
-        <div class="mb-16">
-            <h4 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <span class="text-3xl mr-3">🤖</span>
-                AI & Development
-            </h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center text-2xl">🦙</div>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Ollama Applet</h5>
-                    <p class="text-gray-600 mb-4">Ollama applet for COSMIC Desktop</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/cosmic-ext-applet-ollama" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Repository →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-md card-hover">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-2xl">🐙</div>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Active</span>
-                    </div>
-                    <h5 class="text-xl font-bold text-gray-900 mb-2">Git Work</h5>
-                    <p class="text-gray-600 mb-4">GitHub notifications applet</p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/cosmic-utils/git-work" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Repository →</a>
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                📷
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Camera
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Camera application for COSMIC™
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/camera"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Community Section -->
-    <section class="container mx-auto px-4 py-20">
-        <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-4xl font-bold text-gray-900 mb-6">🤝 Join the Community</h3>
-            <p class="text-xl text-gray-600 mb-8">
-                Want to contribute or create something new for COSMIC? We welcome active contributors who show commitment to the ecosystem!
-            </p>
-            <div class="bg-white rounded-2xl p-8 shadow-lg mb-12">
-                <h4 class="text-2xl font-bold text-gray-800 mb-4">How to Get Involved</h4>
-                <div class="grid md:grid-cols-3 gap-6 text-left">
-                    <div class="flex items-start space-x-3">
-                        <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span class="text-lg">1️⃣</span>
+            <!-- Networking & Communication -->
+            <div class="mb-16">
+                <h4
+                    class="text-2xl font-bold text-gray-800 mb-6 flex items-center"
+                >
+                    <span class="text-3xl mr-3">🌐</span>
+                    Networking & Communication
+                </h4>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                <img
+                                    src="https://raw.githubusercontent.com/cosmic-utils/web-apps/master/resources/icons/hicolor/256x256/apps/dev.heppen.webapps.png"
+                                    alt="app-icon"
+                                />
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            WebApps
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Web applications at your fingertips
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/web-apps"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme/20 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                🦣
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Toot
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Mastodon client for COSMIC™
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/toot"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation & Package Management -->
+            <div class="mb-16">
+                <h4
+                    class="text-2xl font-bold text-gray-800 mb-6 flex items-center"
+                >
+                    <span class="text-3xl mr-3">📦</span>
+                    Installation & Package Management
+                </h4>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme/20 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                <img
+                                    src="https://raw.githubusercontent.com/cosmic-utils/app-hub/refs/heads/master/res/icons/hicolor/scalable/apps/com.francescogaglione.apphub.png"
+                                    alt="app-icon"
+                                />
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            AppHub
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Simple AppImage installer and manager
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/app-hub"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                🧙
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Wizard
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            deb packages installer made with magic
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/wizard"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                <img
+                                    src="https://raw.githubusercontent.com/cosmic-utils/stellarshot/9f8a49dfaaa9bd545e852a9460e3cd99dc2c5e66/res/icons/hicolor/scalable/apps/com.github.cosmic-utils.Stellarshot.svg"
+                                    alt="app-icon"
+                                />
+                            </div>
+                            <span
+                                class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Stellarshot
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Backup app using Restic/Rustic
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/stellarshot"
+                                class="text-cosmic-theme hover:text-opacity-80 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applets Section -->
+        <section
+            id="applets"
+            class="container mx-auto px-4 py-20 bg-white/50 rounded-3xl"
+        >
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">
+                    🔌 Applets
+                </h3>
+                <p class="text-xl text-gray-600">
+                    Lightweight extensions for your COSMIC™ panel and dock
+                </p>
+            </div>
+
+            <!-- System Monitoring -->
+            <div class="mb-16">
+                <h4
+                    class="text-2xl font-bold text-gray-800 mb-6 flex items-center"
+                >
+                    <span class="text-3xl mr-3">📊</span>
+                    System Monitoring
+                </h4>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                📈
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Popular</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Minimon Applet
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Display CPU/Memory/Network/Disk/GPU usage
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/minimon-applet"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme/20 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                💻
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            System Info Applet
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Simple system info applet for COSMIC
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/cosmic-ext-applet-sysinfo"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Utilities -->
+            <div class="mb-16">
+                <h4
+                    class="text-2xl font-bold text-gray-800 mb-6 flex items-center"
+                >
+                    <span class="text-3xl mr-3">🛠️</span>
+                    Utilities
+                </h4>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                📋
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Popular</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Clipboard Manager
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Clipboard manager with history
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/clipboard-manager"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                🔆
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            External Monitor Brightness
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Control brightness of external monitors
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/cosmic-ext-applet-external-monitor-brightness"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                🌤️
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Weather Applet
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Simple weather info applet
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/cosmic-ext-applet-weather"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                <img
+                                    src="https://raw.githubusercontent.com/cappsyco/cosmic-ext-applet-logomenu/refs/heads/main/res/logo.png"
+                                    alt="app-icon"
+                                />
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Logo Menu
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Logo Menu applet for COSMIC™
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/cosmic-ext-applet-logomenu"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                💾
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Drives Applet
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Monitor your drives from the panel
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/cosmic-ext-applet-drives"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme/20 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                📖
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Dictionary Applet
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            English dictionary applet
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/cosmic-ext-applet-dict"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Networking -->
+            <div class="mb-16">
+                <h4
+                    class="text-2xl font-bold text-gray-800 mb-6 flex items-center"
+                >
+                    <span class="text-3xl mr-3">🌐</span>
+                    Networking
+                </h4>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme/20 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                🔒
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Tailscale Applet
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            COSMIC™ applet for Tailscale
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/gui-scale-applet"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-cosmic-theme/20 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                🔗
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            COSMIC Connect
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            KDE Connect functionality for COSMIC
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/cosmic-connect-applet"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI & Development -->
+            <div class="mb-16">
+                <h4
+                    class="text-2xl font-bold text-gray-800 mb-6 flex items-center"
+                >
+                    <span class="text-3xl mr-3">🤖</span>
+                    AI & Development
+                </h4>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-green-400 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                🦙
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Ollama Applet
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            Ollama applet for COSMIC Desktop
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/cosmic-ext-applet-ollama"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-2xl"
+                            >
+                                🐙
+                            </div>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded"
+                                >Active</span
+                            >
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-900 mb-2">
+                            Git Work
+                        </h5>
+                        <p class="text-gray-600 mb-4">
+                            GitHub notifications applet
+                        </p>
+                        <div class="flex gap-2">
+                            <a
+                                href="https://github.com/cosmic-utils/git-work"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                                >View Repository →</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section class="container mx-auto px-4 py-20">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-4xl font-bold text-gray-900 mb-6">
+                    🤝 Join the Community
+                </h3>
+                <p class="text-xl text-gray-600 mb-8">
+                    Want to contribute or create something new for COSMIC? We
+                    welcome active contributors who show commitment to the
+                    ecosystem!
+                </p>
+                <div class="bg-white rounded-2xl p-8 shadow-lg mb-12">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">
+                        How to Get Involved
+                    </h4>
+                    <div class="grid md:grid-cols-3 gap-6 text-left">
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0"
+                            >
+                                <span class="text-lg">1️⃣</span>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-1">
+                                    Contact Us
+                                </h5>
+                                <p class="text-sm text-gray-600">
+                                    Reach out to the maintainers on Mattermost
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-8 h-8 bg-cosmic-theme/20 rounded-lg flex items-center justify-center flex-shrink-0"
+                            >
+                                <span class="text-lg">2️⃣</span>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-1">
+                                    Show Your Work
+                                </h5>
+                                <p class="text-sm text-gray-600">
+                                    Share your COSMIC projects or contributions
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0"
+                            >
+                                <span class="text-lg">3️⃣</span>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-1">
+                                    Get Access
+                                </h5>
+                                <p class="text-sm text-gray-600">
+                                    Join the organization and create new
+                                    repositories
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-cosmic-theme/10 rounded-2xl p-8 border-2 border-cosmic-theme/20"
+                >
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">
+                        🛠️ Start Building
+                    </h4>
+                    <p class="text-gray-600 mb-6">
+                        Use the official templates to kickstart your COSMIC
+                        project:
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a
+                            href="https://github.com/pop-os/cosmic-applet-template"
+                            class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+                        >
+                            <svg
+                                class="w-5 h-5 mr-2"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                />
+                            </svg>
+                            Applet Template
+                        </a>
+                        <a
+                            href="https://github.com/pop-os/cosmic-app-template"
+                            class="inline-flex items-center px-6 py-3 bg-cosmic-theme text-white font-semibold rounded-lg hover:bg-opacity-90 transition"
+                        >
+                            <svg
+                                class="w-5 h-5 mr-2"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                />
+                            </svg>
+                            App Template
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section
+            class="container mx-auto px-4 py-20 bg-cosmic-theme/10 rounded-3xl"
+        >
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-4xl font-bold text-gray-900 mb-12 text-center">
+                    📚 Resources & Links
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a
+                        href="https://github.com/cosmic-utils"
+                        target="_blank"
+                        class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition flex items-center space-x-4"
+                    >
+                        <div
+                            class="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center"
+                        >
+                            <svg
+                                class="w-6 h-6 text-white"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    clip-rule="evenodd"
+                                />
+                            </svg>
                         </div>
                         <div>
-                            <h5 class="font-semibold text-gray-800 mb-1">Contact Us</h5>
-                            <p class="text-sm text-gray-600">Reach out to the maintainers on Mattermost</p>
+                            <h4 class="font-bold text-gray-900">
+                                GitHub Organization
+                            </h4>
+                            <p class="text-sm text-gray-600">
+                                Browse all repositories
+                            </p>
                         </div>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span class="text-lg">2️⃣</span>
+                    </a>
+
+                    <a
+                        href="https://github.com/cosmic-utils/cosmic-project-collection"
+                        target="_blank"
+                        class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition flex items-center space-x-4"
+                    >
+                        <div
+                            class="w-12 h-12 bg-cosmic-theme rounded-lg flex items-center justify-center"
+                        >
+                            <span class="text-2xl">📦</span>
                         </div>
                         <div>
-                            <h5 class="font-semibold text-gray-800 mb-1">Show Your Work</h5>
-                            <p class="text-sm text-gray-600">Share your COSMIC projects or contributions</p>
+                            <h4 class="font-bold text-gray-900">
+                                Project Collection
+                            </h4>
+                            <p class="text-sm text-gray-600">
+                                Curated community projects
+                            </p>
                         </div>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span class="text-lg">3️⃣</span>
+                    </a>
+
+                    <a
+                        href="https://github.com/pop-os/cosmic-epoch"
+                        target="_blank"
+                        class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition flex items-center space-x-4"
+                    >
+                        <div
+                            class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center"
+                        >
+                            <span class="text-2xl">🌌</span>
                         </div>
                         <div>
-                            <h5 class="font-semibold text-gray-800 mb-1">Get Access</h5>
-                            <p class="text-sm text-gray-600">Join the organization and create new repositories</p>
+                            <h4 class="font-bold text-gray-900">
+                                COSMIC Desktop
+                            </h4>
+                            <p class="text-sm text-gray-600">
+                                Official System76 repository
+                            </p>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-8 border-2 border-orange-100">
-                <h4 class="text-2xl font-bold text-gray-800 mb-4">🛠️ Start Building</h4>
-                <p class="text-gray-600 mb-6">Use the official templates to kickstart your COSMIC project:</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://github.com/pop-os/cosmic-applet-template" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-                        </svg>
-                        Applet Template
                     </a>
-                    <a href="https://github.com/pop-os/cosmic-app-template" class="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-                        </svg>
-                        App Template
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Resources Section -->
-    <section class="container mx-auto px-4 py-20 bg-gradient-to-r from-blue-50 to-orange-50 rounded-3xl">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-4xl font-bold text-gray-900 mb-12 text-center">📚 Resources & Links</h3>
-            <div class="grid md:grid-cols-2 gap-6">
-                <a href="https://github.com/cosmic-utils" target="_blank" class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition flex items-center space-x-4">
-                    <div class="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-900">GitHub Organization</h4>
-                        <p class="text-sm text-gray-600">Browse all repositories</p>
-                    </div>
-                </a>
-
-                <a href="https://github.com/cosmic-utils/cosmic-project-collection" target="_blank" class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition flex items-center space-x-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-lg flex items-center justify-center">
-                        <span class="text-2xl">📦</span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-900">Project Collection</h4>
-                        <p class="text-sm text-gray-600">Curated community projects</p>
-                    </div>
-                </a>
-
-                <a href="https://github.com/pop-os/cosmic-epoch" target="_blank" class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition flex items-center space-x-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                        <span class="text-2xl">🌌</span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-900">COSMIC Desktop</h4>
-                        <p class="text-sm text-gray-600">Official System76 repository</p>
-                    </div>
-                </a>
-
-                <a href="https://github.com/cosmic-utils/.github/blob/main/profile/README.md" target="_blank" class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition flex items-center space-x-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                        <span class="text-2xl">📖</span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-900">Documentation</h4>
-                        <p class="text-sm text-gray-600">Read the full README</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="container mx-auto px-4 py-12 mt-20">
-        <div class="border-t border-gray-200 pt-8">
-            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-orange-600 rounded-lg flex items-center justify-center">
-                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-                        </svg>
-                    </div>
-                    <span class="text-gray-600 font-medium">COSMIC Utilities</span>
-                </div>
-                <div class="text-center text-sm text-gray-500">
-                    <p>COSMIC™ is a trademark of System76</p>
-                    <p class="mt-1">This is a community initiative and is not officially affiliated with System76</p>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <a href="https://github.com/cosmic-utils" target="_blank" class="text-gray-600 hover:text-gray-900 transition">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
-                        </svg>
+                    <a
+                        href="https://github.com/cosmic-utils/.github/blob/main/profile/README.md"
+                        target="_blank"
+                        class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition flex items-center space-x-4"
+                    >
+                        <div
+                            class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center"
+                        >
+                            <span class="text-2xl">📖</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">
+                                Documentation
+                            </h4>
+                            <p class="text-sm text-gray-600">
+                                Read the full README
+                            </p>
+                        </div>
                     </a>
                 </div>
             </div>
-            <div class="text-center mt-8 text-sm text-gray-400">
-                <p>© 2026 COSMIC Utilities Community. Most projects use GPL-3.0 or MIT License.</p>
-            </div>
-        </div>
-    </footer>
+        </section>
 
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        <!-- Footer -->
+        <footer class="container mx-auto px-4 py-12 mt-20">
+            <div class="border-t border-gray-200 pt-8">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+                >
+                    <div class="flex items-center space-x-3">
+                        <div
+                            class="w-8 h-8 bg-cosmic-theme rounded-lg flex items-center justify-center"
+                        >
+                            <svg
+                                class="w-5 h-5 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                                />
+                            </svg>
+                        </div>
+                        <span class="text-gray-600 font-medium"
+                            >COSMIC Utilities</span
+                        >
+                    </div>
+                    <div class="text-center text-sm text-gray-500">
+                        <p>COSMIC™ is a trademark of System76</p>
+                        <p class="mt-1">
+                            This is a community initiative and is not officially
+                            affiliated with System76
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <a
+                            href="https://github.com/cosmic-utils"
+                            target="_blank"
+                            class="text-gray-600 hover:text-gray-900 transition"
+                        >
+                            <svg
+                                class="w-6 h-6"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    clip-rule="evenodd"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center mt-8 text-sm text-gray-400">
+                    <p>
+                        © 2026 COSMIC Utilities Community. Most projects use
+                        GPL-3.0 or MIT License.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(
+                        this.getAttribute("href"),
+                    );
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                });
             });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>
