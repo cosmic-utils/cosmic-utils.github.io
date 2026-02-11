@@ -13,6 +13,7 @@ Applications include:
 - Examine: A system information viewer for the COSMIC™ desktop.
 - Tweaks for COSMIC™: A tweaking tool for the COSMIC™ desktop.
 - WebApps:  Web applications at your fingertips.
+- Camera: A camera application for the COSMIC™ desktop.
 - Wizard: deb packages installer made with magic for the COSMIC™ desktop!
 - Observatory: An in-development system monitor application for the COSMIC desktop environment
 
@@ -21,6 +22,20 @@ Applets include:
 - Ollama :  Ollama applet for COSMIC Desktop
 - clipboard-manager :  Clipboard manager for COSMIC™
 - gui-scale-applet : COSMIC™ applet for Tailscale
+
+## Network Setup
+
+The COSMIC Utils website is accessible via multiple domains:
+
+| Domain | Purpose |
+|--------|---------|
+| [cosmic-utils.org](https://cosmic-utils.org) | Primary domain (proxies to GitHub Pages) |
+| [cosmic-utilities.org](https://cosmic-utilities.org) | Redirects to cosmic-utils.org |
+| [cosmic-utils.github.io](https://cosmic-utils.github.io) | GitHub Pages (upstream) |
+
+All domains support HTTPS with automatic certificate management. The `www` subdomains redirect to their non-www counterparts.
+
+**Network Maintainer:** [@FreddyFunk](https://github.com/FreddyFunk)
 
 <!--
 
