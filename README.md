@@ -22,6 +22,20 @@ Applets include:
 - clipboard-manager :  Clipboard manager for COSMIC™
 - gui-scale-applet : COSMIC™ applet for Tailscale
 
+## Network Setup
+
+The COSMIC Utils website is accessible via multiple domains:
+
+| Domain | Purpose |
+|--------|---------|
+| [cosmic-utils.org](https://cosmic-utils.org) | Primary domain (proxies to GitHub Pages) |
+| [cosmic-utilities.org](https://cosmic-utilities.org) | Redirects to cosmic-utils.org |
+| [cosmic-utils.github.io](https://cosmic-utils.github.io) | GitHub Pages (upstream) |
+
+All domains support HTTPS with automatic certificate management. The `www` subdomains redirect to their non-www counterparts.
+
+**Network Maintainer:** [@FreddyFunk](https://github.com/FreddyFunk)
+
 <!--
 
 **Here are some ideas to get you started:**
