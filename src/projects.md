@@ -22,7 +22,7 @@
 
 ![app-icon](/res/io.github.cosmic_utils.camera.svg) **Camera**: A camera application for the COSMIC™ desktop. [Source on Github](https://github.com/cosmic-utils/camera)
 
-![app-icon](/res/io.github.cosmic_utils.enroll.svg) **Enroll**: Manage your fingerprint scanner. [Source on Github](https://github.com/cosmic-utils/enroll)
+![app-icon](/res/org.cosmic_utils.enroll.svg) **Enroll**: Manage your fingerprint scanner. [Source on Github](https://github.com/cosmic-utils/enroll)
 
 ![app-icon](/res/icons/hicolor/scalable/apps/icon.svg) **Observatory**: An in-development system monitor application for the COSMIC desktop environment. [Source on Github](https://github.com/cosmic-utils/observatory)
 
