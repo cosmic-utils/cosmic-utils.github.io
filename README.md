@@ -14,6 +14,7 @@ Applications include:
 - Tweaks for COSMIC™: A tweaking tool for the COSMIC™ desktop.
 - WebApps:  Web applications at your fingertips.
 - Camera: A camera application for the COSMIC™ desktop.
+- Enroll: Manage your fingerprint scanners record through a GUI.
 - Wizard: deb packages installer made with magic for the COSMIC™ desktop!
 - Observatory: An in-development system monitor application for the COSMIC desktop environment
 
