@@ -5,3 +5,6 @@
 
 # io.github.cosmic_utils.camera
 f395e9d5-6a4d-4db0-a409-d1dc924a78c6
+
+# org.cosmic_utils.enroll
+a1bb9a01-bdef-4302-9c16-7c00059da926
