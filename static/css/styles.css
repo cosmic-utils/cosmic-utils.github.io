@@ -147,12 +147,9 @@ code {
 }
 
 .hero__mark {
-	height: clamp(8rem, 8vw, 8rem);
-	width: auto;
 	display: block;
-	overflow: hidden;
-	transform: scale(1.4); /* zoom in to crop out the padding */
-	margin: -1.5rem 0; /* pull the extra scaled height back in */
+	width: clamp(26rem, 40vw, 36rem);
+	height: auto;
 }
 
 .hero__mark--dark {
