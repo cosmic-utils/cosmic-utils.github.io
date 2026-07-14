@@ -1,0 +1,9 @@
+title = "COSMIC Utils"
+description = "Community-driven applications and extensions for the COSMIC™ Desktop."
+base_url = "https://cosmic-utils.org"
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+
+[extra]
+github_org = "https://github.com/cosmic-utils"

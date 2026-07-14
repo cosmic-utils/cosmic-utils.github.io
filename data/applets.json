@@ -1,0 +1,187 @@
+[
+  {
+    "name": "clippy-land",
+    "description": "COSMIC panel applet for keeping a history of recently copied text and images",
+    "repo": "https://github.com/k33wee/clippy-land",
+    "image": "https://raw.githubusercontent.com/k33wee/clippy-land/main/resources/example.png"
+  },
+  {
+    "name": "cosmic-applet-apps-menu",
+    "description": "Category based menu for apps.",
+    "repo": "https://github.com/leb-kuchen/cosmic-applet-apps-menu",
+    "image": "https://preview.redd.it/here-there-are-cosmics-version-of-gnomes-popular-extension-v0-6q8jqqpeh9pc1.png?width=640&crop=smart&auto=webp&s=0f7f5e22e17ac565bc2a5365592da084f3f411cd"
+  },
+  {
+    "name": "cosmic-applet-places-status-indicator",
+    "description": "Menu for quickly navigating places in the system",
+    "repo": "https://github.com/leb-kuchen/cosmic-applet-places-status-indicator",
+    "image": "https://preview.redd.it/here-there-are-cosmics-version-of-gnomes-popular-extension-v0-1vmlqqpeh9pc1.png?width=1920&format=png&auto=webp&s=fdfdffdb3e515a52651ab4e4c7496fc2ef686f7b"
+  },
+  {
+    "name": "cosmic-ext-classic-menu",
+    "description": "Menu applet for launching applications",
+    "repo": "https://github.com/championpeak87/cosmic-ext-classic-menu",
+    "image": "https://raw.githubusercontent.com/championpeak87/cosmic-ext-classic-menu/master/screenshots/cosmic-ext-classic-menu-applet.png"
+  },
+  {
+    "name": "clipboard-manager",
+    "description": "Clipboard manager for COSMIC\u2122",
+    "repo": "https://github.com/cosmic-utils/clipboard-manager",
+    "image": "https://media.githubusercontent.com/media/cosmic-utils/clipboard-manager/master/res/screenshots/main_popup.png"
+  },
+  {
+    "name": "cosmic-applet-emoji-selector",
+    "description": "Emoji selector",
+    "repo": "https://github.com/leb-kuchen/cosmic-applet-emoji-selector",
+    "image": "https://iili.io/JUazV7j.png"
+  },
+  {
+    "name": "cosmic-noise",
+    "description": "Applet for playing background noise",
+    "repo": "https://github.com/bq-wrongway/cosmic-noise",
+    "image": "https://raw.githubusercontent.com/bq-wrongway/cosmic-noise/refs/heads/main/assets/screenshots/new1.png"
+  },
+  {
+    "name": "cosmic-applet-ollama",
+    "description": "Applet for Ollama",
+    "repo": "https://github.com/elevenhsoft/cosmic-applet-ollama",
+    "image": "https://raw.githubusercontent.com/elevenhsoft/cosmic-ext-applet-ollama/main/screenshots/chat.png"
+  },
+  {
+    "name": "cosmic-ext-applet-external-monitor-brightness",
+    "description": "Change brightness of external monitors via DDC/CI protocol",
+    "repo": "https://github.com/cosmic-utils/cosmic-ext-applet-external-monitor-brightness",
+    "image": "https://media.githubusercontent.com/media/cosmic-utils/cosmic-ext-applet-external-monitor-brightness/refs/heads/master/res/screenshot1.png"
+  },
+  {
+    "name": "cosmic-applet-minimon",
+    "description": "Applet for displaying CPU and RAM utilization",
+    "repo": "https://github.com/cosmic-utils/minimon-applet",
+    "image": "https://raw.githubusercontent.com/cosmic-utils/minimon-applet/main/cosmic-applet-minimon.png"
+  },
+  {
+    "name": "cosmic-ext-applet-system-monitor",
+    "description": "Configurable system monitor applet",
+    "repo": "https://github.com/D-Brox/cosmic-ext-applet-system-monitor",
+    "image": "https://github.com/D-Brox/cosmic-ext-applet-system-monitor/raw/master/res/screenshot.png"
+  },
+  {
+    "name": "cosmic-ext-applet-gamemode-status",
+    "description": "GameMode status applet",
+    "repo": "https://github.com/D-Brox/cosmic-ext-applet-gamemode-status",
+    "image": "https://raw.githubusercontent.com/D-Brox/cosmic-ext-applet-gamemode-status/main/res/screenshot1.png"
+  },
+  {
+    "name": "cosmic-ext-applet-caffeine",
+    "description": "Prevents your screen from going to sleep",
+    "repo": "https://github.com/tropicbliss/cosmic-ext-applet-caffeine",
+    "image": "https://raw.githubusercontent.com/tropicbliss/cosmic-ext-applet-caffeine/refs/heads/main/res/screenshot.png"
+  },
+  {
+    "name": "cosmic-ext-applet-privacy-indicator",
+    "description": "Privacy Indicator applet for COSMIC",
+    "repo": "https://github.com/D-Brox/cosmic-ext-applet-privacy-indicator",
+    "image": "https://github.com/D-Brox/cosmic-ext-applet-privacy-indicator/raw/master/res/screenshot.png"
+  },
+  {
+    "name": "cosmic-ext-applet-yt-dlp",
+    "description": "A simple yt-dlp GUI for the COSMIC DE",
+    "repo": "https://github.com/D-Brox/cosmic-ext-applet-yt-dlp",
+    "image": "https://github.com/D-Brox/cosmic-ext-applet-yt-dlp/raw/master/res/screenshot.png"
+  },
+  {
+    "name": "cosmic-ext-applet-logomenu",
+    "description": "A simple quick access 'Logo menu' to collect your launcher options in one place with the logo of your choice.",
+    "repo": "https://github.com/cosmic-utils/cosmic-ext-applet-logomenu",
+    "image": "https://github.com/cosmic-utils/cosmic-ext-applet-logomenu/raw/main/screenshots/cosmic-ext-applet-logomenu.png?raw=true"
+  },
+  {
+    "name": "cosmic-applet-ram-usage",
+    "description": "An applet for the Cosmic DE that displays current total RAM usage",
+    "repo": "https://github.com/samvv/cosmic-applet-ram-usage",
+    "image": "https://github.com/samvv/cosmic-applet-ram-usage/raw/main/screenshot.png"
+  },
+  {
+    "name": "cosmic-ext-applet-vitals",
+    "description": "A minimal configurable applet to display basic system resource usage",
+    "repo": "https://github.com/Coinio/cosmic-ext-applet-vitals",
+    "image": "https://raw.githubusercontent.com/Coinio/cosmic-ext-applet-vitals/main/res/screenshots/main-image.png"
+  },
+  {
+    "name": "cosmic-applet-music-player",
+    "description": "A Music Player control applet for COSMIC panel",
+    "repo": "https://github.com/Ebbo/cosmic-applet-music-player",
+    "image": "https://raw.githubusercontent.com/Ebbo/cosmic-applet-music-player/master/Music_Player_Applet_Controls.png"
+  },
+  {
+    "name": "cosmic-applet-package-updater",
+    "description": "Package update notifier applet for the COSMIC desktop",
+    "repo": "https://github.com/Ebbo/cosmic-applet-package-updater",
+    "image": "https://raw.githubusercontent.com/Ebbo/cosmic-applet-package-updater/master/screenshots/Package-Updater-Main.png"
+  },
+  {
+    "name": "cosmic-applet-systemstats",
+    "description": "Compact system monitor with CPU/GPU temps, memory, and network speeds",
+    "repo": "https://github.com/rylan-x/cosmic-applet-systemstats",
+    "image": "https://raw.githubusercontent.com/rylan-x/cosmic-applet-systemstats/main/res/screenshots/systemstats.png"
+  },
+  {
+    "name": "cosmic-ext-applet-dict",
+    "description": "An English language dictionary applet, perfect for quick access searching for words and definitions, or cycling through some random words to enrich your knowledge of the English language!",
+    "repo": "https://github.com/cosmic-utils/cosmic-ext-applet-dict",
+    "image": "https://github.com/cosmic-utils/cosmic-ext-applet-dict/raw/main/resources/screenshots/screen1.jpg?raw=true"
+  },
+  {
+    "name": "cosmic-ext-connected",
+    "description": "Phone connectivity applet using KDE Connect",
+    "repo": "https://github.com/nwxnw/cosmic-connect-applet",
+    "image": "https://raw.githubusercontent.com/nwxnw/cosmic-connect-applet/main/screenshots/connected-applet.png"
+  },
+  {
+    "name": "cosmic-ext-flux",
+    "description": "Live wallpaper engine \u2014 play video and GIF files as your desktop background with GPU-accelerated decoding, multi-monitor support, and a panel applet for playback controls.",
+    "repo": "https://github.com/franz-net/cosmic-ext-flux",
+    "image": "https://raw.githubusercontent.com/franz-net/cosmic-ext-flux/main/assets/screenshot.png"
+  },
+  {
+    "name": "cosmic-applet-mare",
+    "description": "TIDAL music streaming applet for COSMIC\u2122 \u2014 Hi-Res audio, spectrum visualizer, and MPRIS integration",
+    "repo": "https://github.com/glima/mare-player",
+    "image": "https://raw.githubusercontent.com/glima/mare-player/main/resources/screenshot_applet.png"
+  },
+  {
+    "name": "cosmic-pomodoro",
+    "description": "Simple Pomodoro applet for COSMIC Desktop",
+    "repo": "https://github.com/petar030/cosmic-pomodoro",
+    "image": "https://raw.githubusercontent.com/petar030/cosmic-pomodoro/master/img/GruvboxDark.png"
+  },
+  {
+    "name": "cosmic-ssh-launcher",
+    "description": "SSH launcher panel applet \u2014 quick access to hosts from ~/.ssh/config",
+    "repo": "https://github.com/raph-ael/cosmic-ssh-launcher"
+  },
+  {
+    "name": "cosmic-ext-whether",
+    "description": "Weather applet with NWS and Open-Meteo forecasts",
+    "repo": "https://github.com/nwxnw/cosmic-ext-whether",
+    "image": "https://raw.githubusercontent.com/nwxnw/cosmic-ext-whether/master/screenshots/whether.png"
+  },
+  {
+    "name": "cosmic-ext-applet-mounter",
+    "description": "Manage online mounts and offline mirrors for OneDrive, Google Drive, Box, and SMB",
+    "repo": "https://github.com/uutzinger/cosmic-ext-applet-mounter",
+    "image": "https://raw.githubusercontent.com/uutzinger/cosmic-ext-applet-mounter/master/resources/Popup.png"
+  },
+  {
+    "name": "cosmic-ext-app-switcher",
+    "description": "macOS-style Super+Tab app switcher for COSMIC \u2014 horizontal icon strip overlay with Dark, Light, Frosted, and Midnight themes",
+    "repo": "https://github.com/j0rdiun/cosmic-ext-app-switcher",
+    "image": "https://raw.githubusercontent.com/j0rdiun/cosmic-ext-app-switcher/main/docs/app-switcher.gif"
+  },
+  {
+    "name": "cosmic-ext-applet-eyedropper",
+    "description": "Eyedropper applet for cosmic desktop. Pick colours from the screen.",
+    "repo": "https://github.com/nalladev/cosmic-ext-applet-eyedropper",
+    "image": "https://raw.githubusercontent.com/nalladev/cosmic-ext-applet-eyedropper/main/resources/screenshot-2.png"
+  }
+]

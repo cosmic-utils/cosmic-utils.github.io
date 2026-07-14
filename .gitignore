@@ -1,1 +1,3 @@
-test/
+/public
+.claude
+.DS_Store

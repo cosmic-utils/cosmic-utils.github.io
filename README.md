@@ -2,27 +2,22 @@
 
 This is not an official COSMIC™ Organization from System76. This is for hosting community applications and applets for the COSMIC™ Desktop.
 
-Applications include:
+The site is built with [Zola](https://www.getzola.org/) and showcases every application, applet, theme,
+service and script listed in [cosmic-utils/cosmic-project-collection](https://github.com/cosmic-utils/cosmic-project-collection).
+Nothing about the project list is maintained by hand here — to add a project, open a PR against that
+repository instead.
 
-- AppHub: A simple AppImage manager for the COSMIC™ desktop.
-- Calculator:  A simple calculator for the COSMIC™ desktop.
-- Chronos:  simple and intuitive Pomodoro timer for the COSMIC™ desktop.
-- Tasks:  A simple task management application for the COSMIC™ desktop. 
-- Stellarshot:  A simple backup application using Rustic for the COSMIC™ desktop.
-- Weather:  Weather app written in Rust and libcosmic.
-- Examine: A system information viewer for the COSMIC™ desktop.
-- Tweaks for COSMIC™: A tweaking tool for the COSMIC™ desktop.
-- WebApps:  Web applications at your fingertips.
-- Camera: A camera application for the COSMIC™ desktop.
-- Enroll: Manage your fingerprint scanners record through a GUI.
-- Wizard: deb packages installer made with magic for the COSMIC™ desktop!
-- Observatory: An in-development system monitor application for the COSMIC desktop environment
+## Building locally
 
-Applets include:
+```sh
+python3 ./scripts/sync-projects.py ./data   # fetch and convert the latest project data
+zola serve                                  # or `zola build` for a one-off build
+```
 
-- Ollama :  Ollama applet for COSMIC Desktop
-- clipboard-manager :  Clipboard manager for COSMIC™
-- gui-scale-applet : COSMIC™ applet for Tailscale
+`scripts/sync-projects.py` downloads the RON files from cosmic-project-collection and converts them
+into JSON under `data/`, which Zola's templates read via `load_data`. The `data/*.json` files are
+also committed as a last-known-good fallback so the site still builds if the fetch fails; CI
+refreshes them on every deploy.
 
 ## Network Setup
 

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block content %}
+<section class="hero">
+	<h1 class="hero__logo">
+		<img class="hero__mark hero__mark--light" src="/res/cosmic-logo-neutral.svg" alt="COSMIC">
+		<img class="hero__mark hero__mark--dark" src="/res/cosmic-logo-white.svg" alt="COSMIC">
+		<span class="hero__logo-text">Utilities</span>
+	</h1>
+	<p>Community-driven applications, applets and extensions that extend the power of the
+	COSMIC™ Desktop, made by System76.</p>
+	<nav class="hero__jump">
+		<a href="#applications">Applications</a>
+		<a href="#applets">Applets</a>
+		<a href="#themes">Themes</a>
+		<a href="#services">Services</a>
+		<a href="#scripts">Scripts</a>
+	</nav>
+</section>
+
+<section id="applications" class="project-section">
+	<h2>Applications</h2>
+	{{ macros::project_grid(projects=load_data(path="data/applications.json")) }}
+</section>
+
+<section id="applets" class="project-section">
+	<h2>Applets</h2>
+	{{ macros::project_grid(projects=load_data(path="data/applets.json")) }}
+</section>
+
+<section id="themes" class="project-section">
+	<h2>Themes</h2>
+	{{ macros::project_grid(projects=load_data(path="data/themes.json")) }}
+</section>
+
+<section id="services" class="project-section">
+	<h2>Services</h2>
+	{{ macros::project_grid(projects=load_data(path="data/services.json")) }}
+</section>
+
+<section id="scripts" class="project-section">
+	<h2>Scripts</h2>
+	{{ macros::project_grid(projects=load_data(path="data/scripts.json")) }}
+</section>
+{% endblock content %}

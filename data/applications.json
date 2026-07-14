@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Tasks",
+    "description": "A simple task management application for the COSMIC desktop.",
+    "repo": "https://github.com/edfloreshz/tasks",
+    "image": "https://raw.githubusercontent.com/edfloreshz/tasks/main/res/screenshots/window-light.png"
+  },
+  {
+    "name": "Tweaks for COSMIC\u2122",
+    "description": " A tweaking tool for the COSMIC desktop.",
+    "repo": "https://github.com/cosmic-utils/tweaks",
+    "image": "https://raw.githubusercontent.com/cosmic-utils/tweaks/refs/heads/main/res/screenshots/color-schemes-light.png"
+  },
+  {
+    "name": "Calculator",
+    "description": "A calculator application for the COSMIC desktop.",
+    "repo": "https://github.com/edfloreshz/cosmic-ext-calculator",
+    "image": "https://raw.githubusercontent.com/edfloreshz/cosmic-ext-calculator/main/res/screenshots/window-light.png"
+  },
+  {
+    "name": "fan-control",
+    "description": "Control your fans with different behaviors.",
+    "repo": "https://github.com/wiiznokes/fan-control",
+    "image": "https://media.githubusercontent.com/media/wiiznokes/fan-control/master/res/screenshots/app.png"
+  },
+  {
+    "name": "cosmic-webapps",
+    "description": "Web App Manager for Cosmic desktop written with love and libcosmic. Allow you to simply create web applications from given url working inside separate window of your browser of choice.",
+    "repo": "https://github.com/elevenhsoft/WebApps",
+    "image": "https://raw.githubusercontent.com/cosmic-utils/web-apps/refs/tags/1.0.0/res/screenshots/window-dark.png"
+  },
+  {
+    "name": "cosmic-color-picker",
+    "description": "A color picker for COSMIC.",
+    "repo": "https://github.com/PixelDoted/cosmic-color-picker",
+    "image": "https://raw.githubusercontent.com/PixelDoted/cosmic-ext-color-picker/refs/heads/main/res/screenshots/theme_dark.png"
+  },
+  {
+    "name": "oboete",
+    "description": "A flashcards application for the COSMIC\u2122 desktop.",
+    "repo": "https://github.com/mariinkys/oboete",
+    "image": "https://raw.githubusercontent.com/mariinkys/oboete/main/resources/screenshots/study-dark.png"
+  },
+  {
+    "name": "starry-dex",
+    "description": "Pok\u00e9dex application for the COSMIC\u2122 desktop.",
+    "repo": "https://github.com/mariinkys/starrydex",
+    "image": "https://raw.githubusercontent.com/mariinkys/starrydex/main/resources/screenshots/pokemon-dark.png"
+  },
+  {
+    "name": "cosmic-dirstat",
+    "description": "KDirStat-esque disk usage analyzer using the libcosmic toolkit.",
+    "repo": "https://github.com/Koranir/cosmic-dirstat",
+    "image": "https://raw.githubusercontent.com/Koranir/cosmic-dirstat/master/img/screenshot.png"
+  },
+  {
+    "name": "forecast",
+    "description": "A simple weather application for the COSMIC\u2122 Desktop",
+    "repo": "https://github.com/cosmic-utils/forecast",
+    "image": "https://raw.githubusercontent.com/cosmic-utils/forecast/main/screenshots/window.png"
+  },
+  {
+    "name": "cosmic-ext-2048",
+    "description": "A 2048 game written in libcosmic and Rust",
+    "repo": "https://github.com/Kartonrealista/cosmic-ext-2048",
+    "image": "https://raw.githubusercontent.com/Kartonrealista/cosmic-ext-2048/main/screenshots/s1.png"
+  },
+  {
+    "name": "cosmicding",
+    "description": "linkding companion app for COSMIC\u2122",
+    "repo": "https://github.com/vkhitrin/cosmicding",
+    "image": "https://raw.githubusercontent.com/vkhitrin/cosmicding/main/res/screenshots/bookmarks.png"
+  },
+  {
+    "name": "bodev",
+    "description": "Low level dev tools",
+    "repo": "https://codeberg.org/sgued/bodev",
+    "image": "https://bodev.sgued.fr/screenshot-ascii-light.png"
+  },
+  {
+    "name": "Subscribi",
+    "description": "Track all your subscriptions easily (and privately)",
+    "repo": "https://codeberg.org/Tony4dev/subscribi",
+    "image": "https://codeberg.org/Tony4dev/subscribi/raw/branch/main/resources/screenshots/overview.png"
+  },
+  {
+    "name": "Cupola",
+    "description": "An image viewer built for the COSMIC Desktop.",
+    "repo": "https://codeberg.org/bhh32/cupola",
+    "image": "https://codeberg.org/bhh32/cupola/raw/branch/main/screenshots/gallery_view.png"
+  },
+  {
+    "name": "Mar\u00e9 Player",
+    "description": "TIDAL music streaming for COSMIC\u2122 \u2014 Hi-Res FLAC playback, spectrum visualizer, and MPRIS integration. Also builds as a panel applet.",
+    "repo": "https://github.com/glima/mare-player",
+    "image": "https://raw.githubusercontent.com/glima/mare-player/main/resources/screenshot_standalone.png"
+  },
+  {
+    "name": "COSMIC WallShift",
+    "description": "Automatically switches your wallpaper when the system theme toggles between Light and Dark mode.",
+    "repo": "https://github.com/nagyrenato/cosmic-wallshift",
+    "image": "https://raw.githubusercontent.com/nagyrenato/cosmic-wallshift/master/res/screenshots/image.png"
+  },
+  {
+    "name": "cedilla",
+    "description": "A markdown text editor for the COSMIC\u2122 desktop.",
+    "repo": "https://github.com/mariinkys/cedilla",
+    "image": "https://raw.githubusercontent.com/mariinkys/cedilla/refs/heads/main/resources/screenshots/main-dark.png"
+  },
+  {
+    "name": "Super STT - With COSMIC Visualizer",
+    "description": "Super STT enables effortless voice-to-text in any application, using the most advanced speech models that run 100% locally.",
+    "repo": "https://github.com/jorge-menjivar/super-stt",
+    "image": "https://raw.githubusercontent.com/jorge-menjivar/super-stt/refs/heads/main/.github/assets/demo-smaller.gif"
+  }
+]
