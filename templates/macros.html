@@ -4,7 +4,9 @@
 	<a class="project-card" href="{{ project.repo }}">
 		<div class="project-card__image">
 			{% if project.image %}
-			<img src="{{ project.image }}" alt="" loading="lazy">
+			<img class="project-card__image-backdrop" src="{{ project.image }}" alt="" aria-hidden="true" loading="lazy">
+			<span class="project-card__image-overlay" aria-hidden="true"></span>
+			<img class="project-card__image-foreground" src="{{ project.image }}" alt="{{ project.name }} preview" loading="lazy">
 			{% else %}
 			<div class="project-card__placeholder" aria-hidden="true"></div>
 			{% endif %}
