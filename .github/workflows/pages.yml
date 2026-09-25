@@ -5,6 +5,10 @@ on:
   push:
     branches: ["main"]
 
+  # Refresh project data from cosmic-project-collection every day
+  schedule:
+    - cron: "17 6 * * *"
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
