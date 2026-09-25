@@ -270,11 +270,41 @@ code {
 	padding: 1rem 1.1rem 1.2rem;
 }
 
+.project-card__heading {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 0.75rem;
+	margin-bottom: 0.4rem;
+}
+
 .project-card__body h3 {
-	margin: 0 0 0.4rem;
+	margin: 0;
 	font-size: 1.05rem;
 	font-family: "Roboto Slab", Georgia, serif;
 	color: var(--text);
+}
+
+.project-card__stars {
+	display: inline-flex;
+	flex: 0 0 auto;
+	align-items: center;
+	gap: 0.3rem;
+	color: var(--text-muted);
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+	font-size: 0.8rem;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+.project-card__stars[hidden] {
+	display: none;
+}
+
+.project-card__stars svg {
+	width: 0.95rem;
+	height: 0.95rem;
+	color: #f5b301;
 }
 
 .project-card:hover .project-card__body h3 {
