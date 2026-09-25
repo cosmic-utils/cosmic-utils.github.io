@@ -10,7 +10,13 @@
 			{% endif %}
 		</div>
 		<div class="project-card__body">
-			<h3>{{ project.name }}</h3>
+			<div class="project-card__heading">
+				<h3>{{ project.name }}</h3>
+				<span class="project-card__stars" data-github-stars hidden>
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+					<span data-github-stars-count></span>
+				</span>
+			</div>
 			<p>{{ project.description }}</p>
 		</div>
 	</a>
