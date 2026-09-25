@@ -81,6 +81,7 @@ def parse_ron_list(text: str) -> list[dict]:
             for key, value in fields.items():
                 fields[key] = value.replace('\\"', '"')
             entries.append(fields)
+    entries.sort(key=lambda project: project["name"].casefold())
     return entries
 
 
