@@ -1,7 +1,7 @@
 {% macro project_grid(projects) %}
 <div class="project-grid">
 	{% for project in projects %}
-	<a class="project-card" href="{{ project.repo }}">
+	<a class="project-card" href="{{ project.repo }}" target="_blank" rel="noopener noreferrer">
 		<div class="project-card__image">
 			{% if project.image %}
 			<img src="{{ project.image }}" alt="" loading="lazy">
