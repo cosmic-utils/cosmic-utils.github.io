@@ -209,6 +209,46 @@ code {
 
 /* Project sections */
 
+.project-controls {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	max-width: 72rem;
+	margin: 0 auto;
+	padding: 1.5rem 1.5rem 0;
+}
+
+.project-controls__input,
+.project-controls__select {
+	font: inherit;
+	font-size: 0.95rem;
+	padding: 0.55rem 0.9rem;
+	background-color: var(--surface);
+	color: var(--text);
+	border: 1px solid var(--border);
+	border-radius: 10px;
+	box-shadow: var(--shadow);
+}
+
+.project-controls__input {
+	flex: 1 1 240px;
+}
+
+.project-controls__input::placeholder {
+	color: var(--text-muted);
+}
+
+.project-controls__input:focus-visible,
+.project-controls__select:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 1px;
+}
+
+.project-section[hidden],
+.project-card[hidden] {
+	display: none;
+}
+
 .project-section {
 	max-width: 72rem;
 	margin: 0 auto;

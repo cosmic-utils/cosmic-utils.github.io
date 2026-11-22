@@ -1,7 +1,7 @@
 {% macro project_grid(projects) %}
 <div class="project-grid">
 	{% for project in projects %}
-	<a class="project-card" href="{{ project.repo }}" target="_blank" rel="noopener noreferrer">
+	<a class="project-card" href="{{ project.repo }}" target="_blank" rel="noopener noreferrer" data-name="{{ project.name }}" data-description="{{ project.description }}" data-added="{{ project.added_order | default(value=loop.index0) }}" data-stars="-1">
 		<div class="project-card__image">
 			{% if project.image %}
 			<img class="project-card__image-backdrop" src="{{ project.image }}" alt="" aria-hidden="true" loading="lazy">

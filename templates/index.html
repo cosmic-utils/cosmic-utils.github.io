@@ -19,6 +19,26 @@
 	</nav>
 </section>
 
+<div class="project-controls">
+	<input type="search" id="project-search" class="project-controls__input" placeholder="Search projects…" aria-label="Search projects">
+	<select id="project-category" class="project-controls__select" aria-label="Filter by category">
+		<option value="all">All Categories</option>
+		<option value="applications">Applications</option>
+		<option value="applets">Applets</option>
+		<option value="themes">Themes</option>
+		<option value="services">Services</option>
+		<option value="scripts">Scripts</option>
+	</select>
+	<select id="project-sort" class="project-controls__select" aria-label="Sort projects">
+		<option value="name-asc">Name (A–Z)</option>
+		<option value="name-desc">Name (Z–A)</option>
+		<option value="date-desc">Date Added (Newest)</option>
+		<option value="date-asc">Date Added (Oldest)</option>
+		<option value="rating-desc">Rating (Most Stars)</option>
+		<option value="rating-asc">Rating (Fewest Stars)</option>
+	</select>
+</div>
+
 <section id="applications" class="project-section">
 	<h2>Applications</h2>
 	{{ macros::project_grid(projects=load_data(path="data/applications.json")) }}

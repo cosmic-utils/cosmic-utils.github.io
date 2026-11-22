@@ -75,11 +75,12 @@ def parse_ron_list(text: str) -> list[dict]:
     list_start = text.index("list:")
     body = text[list_start:]
     entries = []
-    for entry_text in split_entries(body):
+    for index, entry_text in enumerate(split_entries(body)):
         fields = dict(FIELD_RE.findall(entry_text))
         if fields:
             for key, value in fields.items():
                 fields[key] = value.replace('\\"', '"')
+            fields["added_order"] = index
             entries.append(fields)
     entries.sort(key=lambda project: project["name"].casefold())
     return entries
