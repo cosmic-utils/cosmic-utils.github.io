@@ -1,4 +1,4 @@
-# COSMIC Utils Website
+# COSMIC Orbit Website
 
 This is not an official COSMIC™ Organization from System76. This is for hosting community applications and applets for the COSMIC™ Desktop.
 
@@ -15,7 +15,7 @@ just serve
 This regenerates the catalog before starting Zola. For a one-off build, run
 `python3 scripts/sync-projects.py && zola build`.
 
-Use a filename like `application-github-cosmic-utils-web-apps.json`. The JSON contains its
+Use a filename like `application-github-cosmic-orbit-web-apps.json`. The JSON contains its
 category, project name, description, repository URL, icon URL, and developer name. Existing
 projects may omit metadata they do not have. The sync script generates `data/catalog.json` from these files and fetches missing repository
 creation dates where available. The generated index is ignored by Git. CI creates it before deployment.
@@ -28,7 +28,7 @@ The COSMIC Utils website is accessible via multiple domains:
 |--------|---------|
 | [cosmic-utils.org](https://cosmic-utils.org) | Primary domain (proxies to GitHub Pages) |
 | [cosmic-utilities.org](https://cosmic-utilities.org) | Redirects to cosmic-utils.org |
-| [cosmic-utils.github.io](https://cosmic-utils.github.io) | GitHub Pages (upstream) |
+| [cosmic-orbit.github.io](https://cosmic-orbit.github.io) | GitHub Pages (upstream) |
 
 All domains support HTTPS with automatic certificate management. The `www` subdomains redirect to their non-www counterparts.
 
