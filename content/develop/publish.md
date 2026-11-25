@@ -8,15 +8,84 @@ Submit standalone desktop apps to **Flathub**. Submit Panel and Dock applets to 
 ## Submit an application to Flathub
 
 1. **Prepare a release.** Tag a version of your app and build a Flatpak manifest that points to the release’s source. Use a supported runtime, include the Cargo dependencies needed for an offline build, and keep the app ID consistent across the manifest, desktop entry, icon, and AppStream metadata. [Flathub requirements](https://docs.flathub.org/docs/for-app-authors/requirements)
-2. **Build, launch, and lint the package.** Replace the example app ID and manifest filename with yours. Open the packaged app and test its main features before filing a pull request. [Flathub build and lint instructions](https://docs.flathub.org/docs/for-app-authors/submission#build-and-install)
+   This example packages the [Hello COSMIC app](@/develop/app.md) using System76’s COSMIC BaseApp. Save it as `flatpak/io.github.yourname.HelloCosmic.json` inside the source checkout for a local build. From the `hello-cosmic` project root, put the manifest and generated Cargo sources in `flatpak/`. The app template generates the desktop entry and AppStream metadata during the Cargo build. These paths match the [template’s install recipe](https://github.com/pop-os/cosmic-app-template/blob/master/justfile).
+
+   ```json
+   {
+     "$schema": "https://raw.githubusercontent.com/flatpak/flatpak-builder/main/data/flatpak-manifest.schema.json",
+     "id": "io.github.yourname.HelloCosmic",
+     "runtime": "org.freedesktop.Platform",
+     "runtime-version": "26.08",
+     "base": "com.system76.Cosmic.BaseApp",
+     "base-version": "stable",
+     "sdk": "org.freedesktop.Sdk",
+     "sdk-extensions": [
+       "org.freedesktop.Sdk.Extension.rust-stable"
+     ],
+     "command": "hello-cosmic",
+     "finish-args": [
+       "--share=ipc",
+         "--socket=wayland",
+       "--socket=fallback-x11",
+       "--device=dri",
+       "--talk-name=com.system76.CosmicSettingsDaemon.*",
+       "--talk-name=com.system76.CosmicSettingsDaemon",
+       "--filesystem=xdg-config/cosmic:ro"
+     ],
+     "build-options": {
+       "append-path": "/usr/lib/sdk/rust-stable/bin"
+     },
+     "modules": [
+       {
+         "name": "hello-cosmic",
+         "buildsystem": "simple",
+         "build-options": {
+           "env": {
+             "CARGO_HOME": "/run/build/hello-cosmic/cargo"
+           }
+         },
+         "build-commands": [
+           "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+           "cargo --offline build --release --locked --verbose",
+           "install -Dm0755 ./target/release/hello-cosmic /app/bin/hello-cosmic",
+           "install -Dm0644 ./target/xdgen/app.desktop /app/share/applications/io.github.yourname.HelloCosmic.desktop",
+           "install -Dm0644 ./target/xdgen/app.metainfo.xml /app/share/metainfo/io.github.yourname.HelloCosmic.metainfo.xml",
+           "install -Dm0644 ./resources/icons/hicolor/scalable/apps/icon.svg /app/share/icons/hicolor/scalable/apps/io.github.yourname.HelloCosmic.svg"
+         ],
+         "sources": [
+           {
+             "type": "dir",
+             "path": "..",
+             "skip": [
+               ".cargo",
+               ".git",
+               ".flatpak-builder",
+               "dist",
+               "target",
+               "vendor",
+               "vendor.tar"
+             ]
+           },
+           "cargo-sources.json"
+         ]
+       }
+     ]
+   }
+   ```
+
+   **Flathub lint exception.** The `--filesystem=xdg-config/cosmic:ro` permission requires a lint exception for `finish-args-unnecessary-xdg-config-cosmic-ro-access`. If your app needs it, open a pull request to Flathub’s linter exception list and explain which COSMIC settings the app reads and why it needs access. Explain the permission in your app submission too, since Flathub reviews permissions separately. [Flathub lint exceptions](https://docs.flathub.org/docs/for-app-authors/linter#exceptions)
+
+   Use [Flatpak’s Cargo source generator](https://github.com/flatpak/flatpak-builder-tools/tree/master/cargo) on the release’s `Cargo.lock` and put `cargo-sources.json` beside the manifest. For the Flathub submission, replace the local `dir` source with a `git` source that specifies your repository URL, release tag, and full commit SHA. Keep the generated Cargo sources in the list so the build can run offline. [Flatpak Builder source types](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
+
+2. **Build, launch, and lint the package.** Run these commands from the directory containing the manifest, using your own app ID and manifest filename. Open the packaged app and test its main features before filing a pull request. [Flathub build and lint instructions](https://docs.flathub.org/docs/for-app-authors/submission#build-and-install)
 
    ```sh
    flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
    flatpak install --user flathub org.flatpak.Builder
 
-   flatpak run --command=flathub-build org.flatpak.Builder --install io.github.yourname.HelloCosmic.yml
+   flatpak run --command=flathub-build org.flatpak.Builder --install io.github.yourname.HelloCosmic.json
    flatpak run io.github.yourname.HelloCosmic
-   flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest io.github.yourname.HelloCosmic.yml
+   flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest io.github.yourname.HelloCosmic.json
    ```
 
 3. **Open a submission pull request.** Fork [flathub/flathub](https://github.com/flathub/flathub) with **Copy the master branch only** unchecked. Create a branch from `new-pr`, add your manifest and its supporting files, then commit and push. On GitHub, target Flathub’s `new-pr` branch and title the PR `Add io.github.yourname.HelloCosmic`, substituting your app ID. Fill in the PR template and explain any permissions the app needs. [Flathub pull request instructions](https://docs.flathub.org/docs/for-app-authors/submission#submission-pr)
