@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}{% if page is defined %}{{ page.title }} · {% endif %}Build for COSMIC · {{ config.title }}{% endblock title %}
+
+{% block content %}
+{% if page is defined %}
+	{% set book = get_section(path="develop/_index.md") %}
+	{% set current = page %}
+{% else %}
+	{% set book = section %}
+	{% set current = section %}
+{% endif %}
+<div class="layout guide">
+	<nav class="guide__toc" aria-label="Developer guide chapters">
+		<a href="{{ book.permalink }}"{% if current.permalink == book.permalink %} aria-current="page"{% endif %}>{{ book.title }}</a>
+		<ol>
+			{% for chapter in book.pages %}
+			<li><a href="{{ chapter.permalink }}"{% if current.permalink == chapter.permalink %} aria-current="page"{% endif %}>{{ chapter.title }}</a></li>
+			{% endfor %}
+		</ol>
+	</nav>
+	<article class="prose guide__content">
+		<h1>{{ current.title }}</h1>
+		{{ current.content | safe }}
+		<nav class="guide__pagination" aria-label="Previous and next chapters">
+			{% if page is defined %}
+				{% set previous = book %}
+				{% if page.lower %}{% set previous = page.lower %}{% endif %}
+				<a class="guide__previous button" rel="prev" href="{{ previous.permalink }}">Previous · {{ previous.title }}</a>
+				{% if page.higher %}
+				<a class="guide__next button" rel="next" href="{{ page.higher.permalink }}">Next · {{ page.higher.title }}</a>
+				{% endif %}
+			{% elif book.pages %}
+				{% set first_chapter = book.pages | first %}
+				<a class="guide__next button" rel="next" href="{{ first_chapter.permalink }}">Next · {{ first_chapter.title }}</a>
+			{% endif %}
+		</nav>
+	</article>
+</div>
+{% endblock content %}
