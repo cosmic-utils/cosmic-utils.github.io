@@ -28,7 +28,7 @@ The COSMIC Utils website is accessible via multiple domains:
 |--------|---------|
 | [cosmic-utils.org](https://cosmic-utils.org) | Primary domain (proxies to GitHub Pages) |
 | [cosmic-utilities.org](https://cosmic-utilities.org) | Redirects to cosmic-utils.org |
-| [cosmic-orbit.github.io](https://cosmic-orbit.github.io) | GitHub Pages (upstream) |
+| [cosmic-ext-orbit.github.io](https://cosmic-ext-orbit.github.io) | GitHub Pages (upstream) |
 
 All domains support HTTPS with automatic certificate management. The `www` subdomains redirect to their non-www counterparts.
 
