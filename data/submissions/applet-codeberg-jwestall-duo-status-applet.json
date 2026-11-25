@@ -3,6 +3,5 @@
   "name": "Duo Status Applet",
   "description": "A combination status applet for the COSMIC desktop. Providing information about battery, volume, network, notifications, bluetooth, and more.",
   "repo": "https://codeberg.org/jwestall/duo-status-applet",
-  "icon": "https://codeberg.org/jwestall/duo-status-applet/src/branch/main/resources/icon.svg",
   "developer": "Jacob Westall"
 }
