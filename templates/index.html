@@ -20,18 +20,21 @@
 <div class="layout catalog" id="projects">
 	<div class="catalog-heading">
 		<h2 class="catalog-title">Project catalog</h2>
-		<label class="catalog-sort" hidden>
-			<span>Sort by</span>
-			<select id="project-sort">
-				<option value="default" selected>Default</option>
-				<option value="az">A–Z</option>
-				<option value="za">Z–A</option>
-				<option value="stars">Stars</option>
-				<option value="developer">Developer</option>
-				<option value="newest">Age · newest first</option>
-				<option value="oldest">Age · oldest first</option>
-			</select>
-		</label>
+		<div class="catalog-controls">
+			<input id="project-search" type="search" aria-label="Search projects" placeholder="Search projects…" hidden>
+			<label class="catalog-sort" hidden>
+				<span>Sort by</span>
+				<select id="project-sort">
+					<option value="default" selected>Default</option>
+					<option value="az">A–Z</option>
+					<option value="za">Z–A</option>
+					<option value="stars">Stars</option>
+					<option value="developer">Developer</option>
+					<option value="newest">Age · newest first</option>
+					<option value="oldest">Age · oldest first</option>
+				</select>
+			</label>
+		</div>
 	</div>
 	<p class="sort-status" role="status"></p>
 	<nav class="category-nav" aria-label="Project categories">
@@ -52,6 +55,8 @@
 		</section>
 	{% endfor %}
 
+	<p class="search-status" role="status"></p>
+
 	<section class="contribution">
 		<div>
 			<h2>Building for COSMIC?</h2>
@@ -63,4 +68,5 @@
 		</div>
 	</section>
 </div>
+<script src="{{ get_url(path='js/project-search.js') }}" defer></script>
 {% endblock content %}

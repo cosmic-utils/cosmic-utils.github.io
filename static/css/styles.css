@@ -84,8 +84,13 @@ body:has(.hero) .site-header { position: absolute; z-index: 2; inset: 0 0 auto; 
 
 .catalog { padding-block: 3.5rem 4.5rem; }
 .catalog-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1rem; margin-bottom: 1rem; }
-.catalog-sort { display: flex; align-items: center; gap: .5rem; color: var(--muted); font-size: .9rem; }
-.catalog-sort select { appearance: none; padding: .38rem 2rem .38rem .65rem; border: 1px solid var(--line); border-radius: .5rem; color: var(--text); font: inherit; background: linear-gradient(45deg, transparent 48%, var(--muted) 50%) right .88rem center / .25rem .25rem no-repeat, linear-gradient(135deg, var(--muted) 50%, transparent 52%) right .63rem center / .25rem .25rem no-repeat, var(--surface); }
+.catalog-controls { display: flex; flex-wrap: wrap; align-items: center; max-width: 100%; gap: .6rem 1rem; }
+#project-search { width: 16rem; max-width: 100%; padding: .38rem .65rem; border: 1px solid var(--line); border-radius: .5rem; color: var(--text); background: var(--surface); font: inherit; }
+#project-search:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+.search-status:empty { display: none; }
+.catalog-sort { display: flex; align-items: center; max-width: 100%; white-space: nowrap; gap: .5rem; color: var(--muted); font-size: .9rem; }
+#project-search, .catalog-sort select { min-height: 2.5rem; }
+.catalog-sort select { min-width: 0; appearance: none; padding: .38rem 2rem .38rem .65rem; border: 1px solid var(--line); border-radius: .5rem; color: var(--text); font: inherit; background: linear-gradient(45deg, transparent 48%, var(--muted) 50%) right .88rem center / .25rem .25rem no-repeat, linear-gradient(135deg, var(--muted) 50%, transparent 52%) right .63rem center / .25rem .25rem no-repeat, var(--surface); }
 .catalog-sort select:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
 .sort-status { margin: 0 0 .75rem; color: var(--muted); font-size: .9rem; }
 .sort-status:empty { margin: 0; }
