@@ -1,0 +1,8 @@
+{
+  "category": "services",
+  "name": "COSMIC Background Wallpaper",
+  "description": "Unofficial service for syncing the theme with the wallpaper for the COSMIC™ desktop",
+  "repo": "https://github.com/wash2/cosmic_ext_bg_theme",
+  "developer": "wash2",
+  "created_at": "2024-05-09"
+}

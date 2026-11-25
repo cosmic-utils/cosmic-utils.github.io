@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="name">
+  <title id="name">COSMIC Nebula</title>
+  <defs>
+    <linearGradient id="linearGradient692" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(136.77571,0,0,-136.77571,127.40062,122.62276)" spreadMethod="pad">
+      <stop stop-color="#ffae02" offset="0"/>
+      <stop stop-color="#ff972a" offset="0.527933"/>
+      <stop stop-color="#fe7e57" offset="0.999999"/>
+      <stop stop-color="#fe7e57" offset="1"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="18%" y1="6%" x2="82%" y2="94%">
+      <stop stop-color="#CADBF1"/>
+      <stop offset=".5" stop-color="#A5BDE2"/>
+      <stop offset="1" stop-color="#7894CC"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0%" y1="82%" x2="100%" y2="12%">
+      <stop stop-color="#243E51"/><stop offset=".55" stop-color="#27213F"/><stop offset="1" stop-color="#53466D"/>
+    </linearGradient>
+    <circle id="window" cx="246" cy="244" r="165"/>
+    <clipPath id="lens"><use xlink:href="#window"/></clipPath>
+    <linearGradient id="trail-0-0" gradientUnits="userSpaceOnUse" x1="148.976" y1="351.756" x2="101.644" y2="230.354"><stop stop-color="#91DCE0" stop-opacity="0.000"/><stop offset="1" stop-color="#91DCE0" stop-opacity="0.134"/></linearGradient>
+    <linearGradient id="trail-0-1" gradientUnits="userSpaceOnUse" x1="101.644" y1="230.354" x2="170.886" y2="119.971"><stop stop-color="#91DCE0" stop-opacity="0.134"/><stop offset="1" stop-color="#91DCE0" stop-opacity="0.318"/></linearGradient>
+    <linearGradient id="trail-0-2" gradientUnits="userSpaceOnUse" x1="170.886" y1="119.971" x2="300.787" y2="109.749"><stop stop-color="#91DCE0" stop-opacity="0.318"/><stop offset="1" stop-color="#91DCE0" stop-opacity="0.528"/></linearGradient>
+    <linearGradient id="trail-0-3" gradientUnits="userSpaceOnUse" x1="300.787" y1="109.749" x2="386.445" y2="207.940"><stop stop-color="#91DCE0" stop-opacity="0.528"/><stop offset="1" stop-color="#91DCE0" stop-opacity="0.757"/></linearGradient>
+    <linearGradient id="trail-0-4" gradientUnits="userSpaceOnUse" x1="386.445" y1="207.940" x2="358.686" y2="335.252"><stop stop-color="#91DCE0" stop-opacity="0.757"/><stop offset="1" stop-color="#91DCE0" stop-opacity="1.000"/></linearGradient>
+    <linearGradient id="trail-1-0" gradientUnits="userSpaceOnUse" x1="226.378" y1="132.716" x2="323.066" y2="161.356"><stop stop-color="#BEA0EE" stop-opacity="0.000"/><stop offset="1" stop-color="#BEA0EE" stop-opacity="0.134"/></linearGradient>
+    <linearGradient id="trail-1-1" gradientUnits="userSpaceOnUse" x1="323.066" y1="161.356" x2="358.381" y2="255.812"><stop stop-color="#BEA0EE" stop-opacity="0.134"/><stop offset="1" stop-color="#BEA0EE" stop-opacity="0.318"/></linearGradient>
+    <linearGradient id="trail-1-2" gradientUnits="userSpaceOnUse" x1="358.381" y1="255.812" x2="304.199" y2="340.860"><stop stop-color="#BEA0EE" stop-opacity="0.318"/><stop offset="1" stop-color="#BEA0EE" stop-opacity="0.528"/></linearGradient>
+    <linearGradient id="trail-1-3" gradientUnits="userSpaceOnUse" x1="304.199" y1="340.860" x2="203.669" y2="348.772"><stop stop-color="#BEA0EE" stop-opacity="0.528"/><stop offset="1" stop-color="#BEA0EE" stop-opacity="0.757"/></linearGradient>
+    <linearGradient id="trail-1-4" gradientUnits="userSpaceOnUse" x1="203.669" y1="348.772" x2="136.850" y2="273.246"><stop stop-color="#BEA0EE" stop-opacity="0.757"/><stop offset="1" stop-color="#BEA0EE" stop-opacity="1.000"/></linearGradient>
+    <linearGradient id="trail-2-0" gradientUnits="userSpaceOnUse" x1="312.684" y1="282.500" x2="252.711" y2="320.706"><stop stop-color="#86CCDB" stop-opacity="0.000"/><stop offset="1" stop-color="#86CCDB" stop-opacity="0.134"/></linearGradient>
+    <linearGradient id="trail-2-1" gradientUnits="userSpaceOnUse" x1="252.711" y1="320.706" x2="187.015" y2="293.495"><stop stop-color="#86CCDB" stop-opacity="0.134"/><stop offset="1" stop-color="#86CCDB" stop-opacity="0.318"/></linearGradient>
+    <linearGradient id="trail-2-2" gradientUnits="userSpaceOnUse" x1="187.015" y1="293.495" x2="171.624" y2="224.071"><stop stop-color="#86CCDB" stop-opacity="0.318"/><stop offset="1" stop-color="#86CCDB" stop-opacity="0.528"/></linearGradient>
+    <linearGradient id="trail-2-3" gradientUnits="userSpaceOnUse" x1="171.624" y1="224.071" x2="219.664" y2="171.643"><stop stop-color="#86CCDB" stop-opacity="0.528"/><stop offset="1" stop-color="#86CCDB" stop-opacity="0.757"/></linearGradient>
+    <linearGradient id="trail-2-4" gradientUnits="userSpaceOnUse" x1="219.664" y1="171.643" x2="290.165" y2="180.924"><stop stop-color="#86CCDB" stop-opacity="0.757"/><stop offset="1" stop-color="#86CCDB" stop-opacity="1.000"/></linearGradient>
+  </defs>
+  <g transform="translate(10 12) rotate(-10 246 244)">
+    <circle cx="246" cy="244" r="202" fill="url(#frame)"/>
+    <g clip-path="url(#lens)">
+      <rect x="78" y="76" width="336" height="336" fill="url(#core)"/>
+      <g fill="none">
+        <g transform="translate(246 244) scale(0.919310345) translate(-246 -244)">
+          <path d="M148.976 351.756C114.880 321.055 97.326 276.031 101.644 230.354" stroke="url(#trail-0-0)" stroke-width="4.35109"/>
+          <path d="M101.644 230.354C105.961 184.678 131.642 143.739 170.886 119.971" stroke="url(#trail-0-1)" stroke-width="4.35109"/>
+          <path d="M170.886 119.971C210.130 96.205 258.308 92.413 300.787 109.749" stroke="url(#trail-0-2)" stroke-width="4.35109"/>
+          <path d="M300.787 109.749C343.266 127.083 375.035 163.501 386.445 207.940" stroke="url(#trail-0-3)" stroke-width="4.35109"/>
+          <path d="M386.445 207.940C397.855 252.379 387.560 299.595 358.686 335.252" stroke="url(#trail-0-4)" stroke-width="4.35109"/>
+          <circle cx="358.686" cy="335.252" r="7.61440" fill="#91DCE0"/>
+        </g>
+        <g transform="translate(246 244) scale(0.880530973) translate(-246 -244)">
+          <path d="M226.378 132.716C261.316 126.556 297.119 137.162 323.066 161.356" stroke="url(#trail-1-0)" stroke-width="4.76985"/>
+          <path d="M323.066 161.356C349.012 185.553 362.089 220.530 358.381 255.812" stroke="url(#trail-1-1)" stroke-width="4.76985"/>
+          <path d="M358.381 255.812C354.673 291.095 334.609 322.588 304.199 340.860" stroke="url(#trail-1-2)" stroke-width="4.76985"/>
+          <path d="M304.199 340.860C273.789 359.133 236.563 362.062 203.669 348.772" stroke="url(#trail-1-3)" stroke-width="4.76985"/>
+          <path d="M203.669 348.772C170.775 335.482 146.033 307.515 136.850 273.246" stroke="url(#trail-1-4)" stroke-width="4.76985"/>
+          <circle cx="136.850" cy="273.246" r="7.94975" fill="#BEA0EE"/>
+        </g>
+        <g transform="translate(246 244) scale(0.856493506) translate(-246 -244)">
+          <path d="M312.684 282.500C300.123 304.257 277.738 318.518 252.711 320.706" stroke="url(#trail-2-0)" stroke-width="4.08643"/>
+          <path d="M252.711 320.706C227.684 322.896 203.163 312.740 187.015 293.495" stroke="url(#trail-2-1)" stroke-width="4.08643"/>
+          <path d="M187.015 293.495C170.866 274.250 165.122 248.337 171.624 224.071" stroke="url(#trail-2-2)" stroke-width="4.08643"/>
+          <path d="M171.624 224.071C178.126 199.804 196.057 180.237 219.664 171.643" stroke="url(#trail-2-3)" stroke-width="4.08643"/>
+          <path d="M219.664 171.643C243.272 163.052 269.586 166.517 290.165 180.924" stroke="url(#trail-2-4)" stroke-width="4.08643"/>
+          <circle cx="290.165" cy="180.924" r="6.42153" fill="#86CCDB"/>
+        </g>
+      </g>
+      <g fill="#FFF">
+        <circle cx="128" cy="187" r="3"/><circle cx="179" cy="136" r="3.5"/>
+        <circle cx="286" cy="139" r="3"/><circle cx="339" cy="175" r="3.5"/>
+        <circle cx="122" cy="264" r="3"/><circle cx="293" cy="273" r="2.5"/>
+        <circle cx="192" cy="350" r="3"/><circle cx="261" cy="331" r="3.5"/>
+        <circle cx="314" cy="319" r="2.5"/><circle cx="147" cy="346" r="2.5"/>
+        <circle cx="246" cy="244" r="33" fill="#333353" stroke="#D0C5F3" stroke-width="3"/>
+        <!-- System76's original COSMIC white + gradient mark, uniformly scaled. -->
+        <g transform="translate(246 244) rotate(10) scale(.23 -.23) translate(-198.275 -169.718)">
+          <path transform="translate(278.9731 184.3507)" d="m 0,0 c 0,-18.063 -7.036,-30.65 -20.904,-36.183 -5.829,-2.32 -12.809,-3.508 -20.755,-3.508 h -24.709 c -5.142,0 -9.319,4.177 -9.319,9.32 0,2.58 1.039,4.901 2.728,6.59 1.69,1.689 4.01,2.729 6.591,2.729 h 15.891 c 24.394,0 29.926,4.511 29.926,19.622 0,18.806 -7.277,23.132 -22.723,23.132 h -79.827 c -15.687,0 -22.686,-4.437 -22.686,-23.132 0,-15.129 5.848,-19.622 29.908,-19.622 h 15.946 c 5.161,0 9.32,-4.177 9.32,-9.319 0,-2.581 -1.04,-4.902 -2.729,-6.591 -1.671,-1.689 -4.01,-2.729 -6.591,-2.729 h -24.765 c -7.964,0 -14.944,1.188 -20.755,3.508 -13.868,5.533 -20.903,18.12 -20.903,36.183 0,27.234 15.389,41.621 44.536,41.621 h 77.265 C -15.409,41.621 0,27.234 0,0" fill="#FFF"/>
+          <path d="m 137.679,131.782 c -5.667,0 -10.279,-4.109 -10.279,-9.159 v 0 c 0,-5.051 4.612,-9.159 10.279,-9.159 v 0 h 116.219 c 5.667,0 10.278,4.108 10.278,9.159 v 0 c 0,5.05 -4.611,9.159 -10.278,9.159 v 0 z" fill="url(#linearGradient692)"/>
+        <path transform="translate(284.3833 113.4642)" d="m 0,0 h -1.313 l -0.172,3.96 c -0.037,1.009 -0.037,1.542 0.018,2.285 H -1.485 L -3.274,0.8 H -4.455 L -6.416,6.226 H -6.435 C -6.378,5.521 -6.378,4.741 -6.416,3.96 L -6.568,0 h -1.256 l 0.304,7.425 h 1.846 l 1.809,-5.273 1.695,5.273 h 1.866 z m -8.511,6.302 h -2.322 V 0 h -1.352 v 6.302 h -2.437 V 7.425 H -8.3 Z" fill="#FFF"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

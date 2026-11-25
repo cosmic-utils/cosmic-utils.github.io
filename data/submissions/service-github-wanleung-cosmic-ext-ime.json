@@ -1,0 +1,8 @@
+{
+  "category": "services",
+  "name": "cosmic-ext-ime",
+  "description": "Input method for COSMIC: Cangjie / Quick (倉頡／速成) via libcangjie2 and any RIME schema via librime, with a themed candidate popup and a settings app",
+  "repo": "https://github.com/wanleung/cosmic-ext-ime",
+  "developer": "wanleung",
+  "created_at": "2026-09-12"
+}

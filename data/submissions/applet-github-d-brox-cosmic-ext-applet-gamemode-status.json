@@ -1,0 +1,8 @@
+{
+  "category": "applets",
+  "name": "cosmic-ext-applet-gamemode-status",
+  "description": "GameMode status applet",
+  "repo": "https://github.com/D-Brox/cosmic-ext-applet-gamemode-status",
+  "developer": "D-Brox",
+  "created_at": "2024-09-07"
+}

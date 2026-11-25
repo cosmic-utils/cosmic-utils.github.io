@@ -5,7 +5,7 @@ on:
   push:
     branches: ["main"]
 
-  # Refresh project data from cosmic-project-collection every day
+  # Refresh project metadata every day
   schedule:
     - cron: "17 6 * * *"
 
@@ -42,8 +42,10 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Sync project data from cosmic-project-collection
+      - name: Generate the project catalog from submissions
         run: python3 ./scripts/sync-projects.py ./data
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Install Zola
         uses: taiki-e/install-action@v2

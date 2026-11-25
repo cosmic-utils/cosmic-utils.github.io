@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "Lumen",
+  "description": "A Lemmy client for the COSMIC desktop.",
+  "repo": "https://github.com/cosmic-utils/cosmic-ext-lumen",
+  "icon": "https://raw.githubusercontent.com/cosmic-utils/cosmic-ext-lumen/main/resources/icons/hicolor/scalable/apps/icon.svg",
+  "developer": "Eduardo Flores",
+  "created_at": "2026-11-10"
+}

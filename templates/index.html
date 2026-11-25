@@ -1,46 +1,63 @@
 {% extends "base.html" %}
-{% import "macros.html" as macros %}
-
 {% block content %}
 <section class="hero">
-	<h1 class="hero__logo">
-		<img class="hero__mark hero__mark--light" src="/res/cosmic-logo-neutral.svg" alt="COSMIC">
-		<img class="hero__mark hero__mark--dark" src="/res/cosmic-logo-white.svg" alt="COSMIC">
-		<span class="hero__logo-text">Utilities</span>
-	</h1>
-	<p>Community-driven applications, applets and extensions that extend the power of the
-	COSMIC™ Desktop, made by System76.</p>
-	<nav class="hero__jump">
+	<div class="layout hero-inner">
+		<div class="hero-copy">
+			<h1>COSMIC <span>Orbit</span></h1>
+			<h2>Taking COSMIC™ further, together</h2>
+			<p>Explore what independent developers are building, find something new for your desktop, or launch a project of your own.</p>
+			<div class="actions">
+				<a class="button button-primary" href="#projects">Explore projects</a>
+				<a class="button" href="/contribute/">Get involved</a>
+			</div>
+		</div>
+		<div class="hero-art" aria-hidden="true">
+			<img src="/cosmic-orbit.svg" alt="" width="512" height="512" fetchpriority="high">
+		</div>
+	</div>
+</section>
+
+<div class="layout catalog" id="projects">
+	<div class="catalog-heading">
+		<h2 class="catalog-title">Project catalog</h2>
+		<label class="catalog-sort" hidden>
+			<span>Sort by</span>
+			<select id="project-sort">
+				<option value="default" selected>Default</option>
+				<option value="az">A–Z</option>
+				<option value="za">Z–A</option>
+				<option value="stars">Stars</option>
+				<option value="developer">Developer</option>
+				<option value="newest">Age · newest first</option>
+				<option value="oldest">Age · oldest first</option>
+			</select>
+		</label>
+	</div>
+	<p class="sort-status" role="status"></p>
+	<nav class="category-nav" aria-label="Project categories">
 		<a href="#applications">Applications</a>
 		<a href="#applets">Applets</a>
 		<a href="#themes">Themes</a>
 		<a href="#services">Services</a>
 		<a href="#scripts">Scripts</a>
 	</nav>
-</section>
 
-<section id="applications" class="project-section">
-	<h2>Applications</h2>
-	{{ macros::project_grid(projects=load_data(path="data/applications.json")) }}
-</section>
+	{% set catalog = load_data(path="data/catalog.json") %}
+	{% for category in ["Applications", "Applets", "Themes", "Services", "Scripts"] %}
+		{% set section = category | lower %}
+		<section id="{{ section }}" class="project-section" aria-labelledby="{{ section }}-title">
+			<h3 id="{{ section }}-title">{{ category }}</h3>
+			{% set projects = catalog[section] %}
+			{% include "macros.html" %}
+		</section>
+	{% endfor %}
 
-<section id="applets" class="project-section">
-	<h2>Applets</h2>
-	{{ macros::project_grid(projects=load_data(path="data/applets.json")) }}
-</section>
-
-<section id="themes" class="project-section">
-	<h2>Themes</h2>
-	{{ macros::project_grid(projects=load_data(path="data/themes.json")) }}
-</section>
-
-<section id="services" class="project-section">
-	<h2>Services</h2>
-	{{ macros::project_grid(projects=load_data(path="data/services.json")) }}
-</section>
-
-<section id="scripts" class="project-section">
-	<h2>Scripts</h2>
-	{{ macros::project_grid(projects=load_data(path="data/scripts.json")) }}
-</section>
+	<section class="contribution">
+		<div>
+			<h2>Building for COSMIC?</h2>
+			<p>Add your project to the catalog or contribute to an existing one.</p>
+		</div>
+		<a class="button" href="/contribute/">How to contribute</a>
+	</section>
+</div>
 {% endblock content %}

@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "Calculator",
+  "description": "A calculator application for the COSMIC desktop.",
+  "repo": "https://github.com/cosmic-utils/cosmic-ext-calculator",
+  "icon": "https://raw.githubusercontent.com/edfloreshz/cosmic-ext-calculator/HEAD/res/icons/hicolor/scalable/apps/dev.edfloreshz.Calculator.svg",
+  "developer": "Eduardo Flores",
+  "created_at": "2024-08-15"
+}

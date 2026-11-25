@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "bodev",
+  "description": "Low level dev tools",
+  "repo": "https://codeberg.org/sgued/bodev",
+  "icon": "https://codeberg.org/sgued/bodev/raw/branch/main/assets/icon.svg",
+  "developer": "sgued",
+  "created_at": "2025-01-05"
+}

@@ -2,22 +2,23 @@
 
 This is not an official COSMIC™ Organization from System76. This is for hosting community applications and applets for the COSMIC™ Desktop.
 
-The site is built with [Zola](https://www.getzola.org/) and showcases every application, applet, theme,
-service and script listed in [cosmic-utils/cosmic-project-collection](https://github.com/cosmic-utils/cosmic-project-collection).
-Nothing about the project list is maintained by hand here — to add a project, open a PR against that
-repository instead.
+The site is built with [Zola](https://www.getzola.org/). Each catalog entry lives in its own
+JSON file under `data/submissions/`. The [Contribute page](https://cosmic-utils.org/contribute/)
+prepares a pull request that adds one of these files.
 
 ## Building locally
 
 ```sh
-python3 ./scripts/sync-projects.py ./data   # fetch and convert the latest project data
-zola serve                                  # or `zola build` for a one-off build
+just serve
 ```
 
-`scripts/sync-projects.py` downloads the RON files from cosmic-project-collection and converts them
-into JSON under `data/`, which Zola's templates read via `load_data`. The `data/*.json` files are
-also committed as a last-known-good fallback so the site still builds if the fetch fails; CI
-refreshes them on every deploy.
+This regenerates the catalog before starting Zola. For a one-off build, run
+`python3 scripts/sync-projects.py && zola build`.
+
+Use a filename like `application-github-cosmic-utils-web-apps.json`. The JSON contains its
+category, project name, description, repository URL, icon URL, and developer name. Existing
+projects may omit metadata they do not have. The sync script generates `data/catalog.json` from these files and fetches missing repository
+creation dates where available. The generated index is ignored by Git. CI creates it before deployment.
 
 ## Network Setup
 

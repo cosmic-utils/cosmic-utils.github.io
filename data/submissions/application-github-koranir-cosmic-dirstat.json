@@ -1,0 +1,8 @@
+{
+  "category": "applications",
+  "name": "cosmic-dirstat",
+  "description": "KDirStat-esque disk usage analyzer using the libcosmic toolkit.",
+  "repo": "https://github.com/Koranir/cosmic-dirstat",
+  "developer": "Koranir",
+  "created_at": "2024-06-17"
+}

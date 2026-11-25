@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "Activate Linux",
+  "description": "The \"Activate Windows\" watermark, for the COSMIC™ desktop",
+  "repo": "https://github.com/bbbenji/cosmic-ext-activate-linux",
+  "icon": "https://raw.githubusercontent.com/bbbenji/cosmic-ext-activate-linux/HEAD/resources/icons/hicolor/128x128/apps/io.github.bbbenji.ActivateLinux.png",
+  "developer": "bbbenji",
+  "created_at": "2026-10-20"
+}

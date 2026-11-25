@@ -1,0 +1,9 @@
+{
+  "category": "applets",
+  "name": "Puron",
+  "description": "COSMIC™ panel applet that shows hardware sensor readings: temperatures, fan speeds, voltages and liquid cooling.",
+  "repo": "https://github.com/elalonde/puron",
+  "icon": "https://raw.githubusercontent.com/elalonde/puron/HEAD/data/icons/hicolor/scalable/apps/io.github.elalonde.Puron.svg",
+  "developer": "elalonde",
+  "created_at": "2026-11-05"
+}

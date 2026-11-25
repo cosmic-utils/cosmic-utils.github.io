@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "2048",
+  "description": "A 2048 game written in libcosmic and Rust",
+  "repo": "https://github.com/Kartonrealista/cosmic-ext-2048",
+  "icon": "https://raw.githubusercontent.com/Kartonrealista/cosmic-ext-2048/HEAD/res/icons/hicolor/scalable/apps/io.github.Kartonrealista.cosmic-ext-2048.svg",
+  "developer": "Kartonrealista",
+  "created_at": "2024-07-01"
+}

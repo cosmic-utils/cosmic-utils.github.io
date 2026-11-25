@@ -1,0 +1,9 @@
+{
+  "category": "applets",
+  "name": "cosmic-applet-arch",
+  "description": "Applet to display Arch Linux package update status",
+  "repo": "https://github.com/nick42d/cosmic-applet-arch",
+  "icon": "https://raw.githubusercontent.com/nick42d/cosmic-applet-arch/HEAD/res/icons/hicolor/128x128/apps/com.nick42d.CosmicAppletArch.svg",
+  "developer": "nick42d",
+  "created_at": "2024-10-14"
+}

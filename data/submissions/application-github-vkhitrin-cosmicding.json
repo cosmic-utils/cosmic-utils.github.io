@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "cosmicding",
+  "description": "linkding companion app for COSMIC™",
+  "repo": "https://github.com/vkhitrin/cosmicding",
+  "icon": "https://raw.githubusercontent.com/vkhitrin/cosmicding/HEAD/res/icons/hicolor/scalable/apps/com.vkhitrin.cosmicding.svg",
+  "developer": "vkhitrin",
+  "created_at": "2024-10-09"
+}

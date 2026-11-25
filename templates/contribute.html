@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+
+{% block content %}
+<section class="prose">
+	<h1>{{ page.title }}</h1>
+	<h2>Submit a project</h2>
+	<p>Share an app, applet, theme, service, or script built for the COSMIC Desktop. GitHub will ask you to sign in and open a pull request for review.</p>
+
+	<form class="submission-form" id="project-submission" data-editor="{{ config.extra.github_submission_editor }}" hidden>
+		<div class="submission-form__row">
+			<label>Project type
+				<select name="category" required>
+					<option value="">Choose a type</option>
+					<option value="applications">Application</option>
+					<option value="applets">Applet</option>
+					<option value="themes">Theme</option>
+					<option value="services">Service</option>
+					<option value="scripts">Script</option>
+				</select>
+			</label>
+			<label>Project name
+				<input type="text" name="name" maxlength="100" required>
+			</label>
+		</div>
+		<label>Description
+			<textarea name="description" rows="4" maxlength="400" required></textarea>
+		</label>
+		<label>Repository URL
+			<input type="url" name="repo" maxlength="500" placeholder="https://" required>
+		</label>
+		<label>Icon URL
+			<input type="url" name="icon" maxlength="500" placeholder="https://" aria-describedby="icon-url-hint" required>
+		</label>
+		<small id="icon-url-hint">Use a direct HTTPS link to the project’s icon image.</small>
+		<label>Developer name
+			<input type="text" name="developer" maxlength="100" required>
+		</label>
+		<button class="button button-primary" type="submit">Open pull request on GitHub</button>
+		<div id="submission-handoff" hidden>
+			<p>On GitHub, commit to a new branch or choose <strong>Propose changes</strong>, then select <strong>Create pull request</strong>.</p>
+			<p><a id="submission-editor" target="_blank" rel="noopener noreferrer">Open the prepared file again</a></p>
+			<details>
+				<summary>View the prepared JSON</summary>
+				<p>File name: <code id="submission-filename"></code></p>
+				<pre id="submission-json"></pre>
+			</details>
+		</div>
+	</form>
+	<noscript><p><a href="{{ config.extra.github_submission_editor }}">Submit a project on GitHub</a>. Add a JSON file with category, name, description, repo, icon, and developer fields.</p></noscript>
+
+	{{ page.content | safe }}
+</section>
+<script src="/js/project-submission.js" defer></script>
+{% endblock content %}

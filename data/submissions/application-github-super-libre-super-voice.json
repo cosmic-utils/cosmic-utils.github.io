@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "Super STT - With COSMIC Visualizer",
+  "description": "Super STT enables effortless voice-to-text in any application, using the most advanced speech models that run 100% locally.",
+  "repo": "https://github.com/super-libre/super-voice",
+  "icon": "https://raw.githubusercontent.com/jorge-menjivar/super-stt/HEAD/super-voice-app/resources/icons/hicolor/scalable/apps/super-voice-app.svg",
+  "developer": "super-libre",
+  "created_at": "2025-08-16"
+}

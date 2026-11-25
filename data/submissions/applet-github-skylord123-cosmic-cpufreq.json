@@ -1,0 +1,8 @@
+{
+  "category": "applets",
+  "name": "cosmic-cpufreq",
+  "description": "CPU frequency monitor and governor control applet",
+  "repo": "https://github.com/skylord123/cosmic-cpufreq",
+  "developer": "skylord123",
+  "created_at": "2026-04-23"
+}

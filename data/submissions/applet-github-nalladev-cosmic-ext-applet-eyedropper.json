@@ -1,0 +1,9 @@
+{
+  "category": "applets",
+  "name": "cosmic-ext-applet-eyedropper",
+  "description": "Eyedropper applet for cosmic desktop. Pick colours from the screen.",
+  "repo": "https://github.com/nalladev/cosmic-ext-applet-eyedropper",
+  "icon": "https://raw.githubusercontent.com/nalladev/cosmic-ext-applet-eyedropper/HEAD/resources/icon.svg",
+  "developer": "nalladev",
+  "created_at": "2026-01-18"
+}

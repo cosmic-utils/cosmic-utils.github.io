@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "Astroute",
+  "description": "Per-app network access, interface routing and proxy controls for COSMIC.",
+  "repo": "https://github.com/cosmic-utils/astroute",
+  "icon": "https://raw.githubusercontent.com/cosmic-utils/astroute/HEAD/resources/icons/hicolor/scalable/apps/io.github.astroute.Astroute.svg",
+  "developer": "cosmic-utils",
+  "created_at": "2026-11-07"
+}

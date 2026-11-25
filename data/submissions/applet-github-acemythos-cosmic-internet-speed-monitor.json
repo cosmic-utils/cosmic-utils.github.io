@@ -1,0 +1,8 @@
+{
+  "category": "applets",
+  "name": "internet-speed-monitor",
+  "description": "Internet speed and data usage monitor applet for the COSMIC™ desktop with live speeds, hourly sparkline, monthly bar chart, and connection details",
+  "repo": "https://github.com/AceMythos/cosmic-internet-speed-monitor",
+  "developer": "AceMythos",
+  "created_at": "2026-07-18"
+}

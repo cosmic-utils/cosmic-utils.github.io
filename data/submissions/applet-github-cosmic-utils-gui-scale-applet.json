@@ -1,0 +1,8 @@
+{
+  "category": "applets",
+  "name": "gui-scale-applet",
+  "description": "COSMIC applet for Tailscale",
+  "repo": "https://github.com/cosmic-utils/gui-scale-applet",
+  "developer": "cosmic-utils",
+  "created_at": "2024-10-03"
+}

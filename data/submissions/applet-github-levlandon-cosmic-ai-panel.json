@@ -1,0 +1,8 @@
+{
+  "category": "applets",
+  "name": "cosmic-ai-panel",
+  "description": "AI assistant panel applet for COSMIC desktop with streaming responses, markdown rendering, and model switching",
+  "repo": "https://github.com/levlandon/cosmic-ai-panel",
+  "developer": "levlandon",
+  "created_at": "2026-03-22"
+}

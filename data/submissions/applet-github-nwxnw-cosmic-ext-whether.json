@@ -1,0 +1,8 @@
+{
+  "category": "applets",
+  "name": "cosmic-ext-whether",
+  "description": "Weather applet with NWS and Open-Meteo forecasts",
+  "repo": "https://github.com/nwxnw/cosmic-ext-whether",
+  "developer": "nwxnw",
+  "created_at": "2026-03-01"
+}

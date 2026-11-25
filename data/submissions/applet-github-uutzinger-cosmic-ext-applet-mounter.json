@@ -1,0 +1,9 @@
+{
+  "category": "applets",
+  "name": "cosmic-ext-applet-mounter",
+  "description": "Manage online mounts and offline mirrors for OneDrive, Google Drive, Box, and SMB",
+  "repo": "https://github.com/uutzinger/cosmic-ext-applet-mounter",
+  "icon": "https://raw.githubusercontent.com/uutzinger/cosmic-ext-applet-mounter/HEAD/resources/icon.svg",
+  "developer": "uutzinger",
+  "created_at": "2026-06-15"
+}

@@ -1,0 +1,9 @@
+{
+  "category": "applets",
+  "name": "cosmic-media-now-playing-applet",
+  "description": "A panel applet for the COSMIC™ Desktop Environment that displays the currently playing media track with lots of features.",
+  "repo": "https://github.com/stldave314/cosmic-media-now-playing-applet",
+  "icon": "https://raw.githubusercontent.com/stldave314/cosmic-media-now-playing-applet/HEAD/resources/icon.svg",
+  "developer": "stldave314",
+  "created_at": "2026-04-26"
+}

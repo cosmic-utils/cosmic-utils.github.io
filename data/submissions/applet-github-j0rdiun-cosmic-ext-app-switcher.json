@@ -1,0 +1,8 @@
+{
+  "category": "applets",
+  "name": "cosmic-ext-app-switcher",
+  "description": "macOS-style Super+Tab app switcher for COSMIC — horizontal icon strip overlay with Dark, Light, Frosted, and Midnight themes",
+  "repo": "https://github.com/j0rdiun/cosmic-ext-app-switcher",
+  "developer": "j0rdiun",
+  "created_at": "2026-06-26"
+}

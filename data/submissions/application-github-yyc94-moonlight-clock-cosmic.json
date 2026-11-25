@@ -1,0 +1,8 @@
+{
+  "category": "applications",
+  "name": "Moonlight Clock",
+  "description": "Native Persona 3 inspired desktop clock for COSMIC Wayland",
+  "repo": "https://github.com/yyc94/moonlight-clock-cosmic",
+  "developer": "yyc94",
+  "created_at": "2026-09-02"
+}

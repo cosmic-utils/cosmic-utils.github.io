@@ -1,0 +1,8 @@
+{
+  "category": "scripts",
+  "name": "pywal-cosmic-term",
+  "description": "Python script to use your pywal generated color palette with cosmic-term",
+  "repo": "https://github.com/dharmik2319/pywal-cosmic-term",
+  "developer": "dharmik2319",
+  "created_at": "2024-08-05"
+}

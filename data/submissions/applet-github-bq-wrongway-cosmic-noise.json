@@ -1,0 +1,8 @@
+{
+  "category": "applets",
+  "name": "cosmic-noise",
+  "description": "Applet for playing background noise",
+  "repo": "https://github.com/bq-wrongway/cosmic-noise",
+  "developer": "bq-wrongway",
+  "created_at": "2024-05-12"
+}

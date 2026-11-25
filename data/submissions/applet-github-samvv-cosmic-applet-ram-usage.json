@@ -1,0 +1,8 @@
+{
+  "category": "applets",
+  "name": "cosmic-applet-ram-usage",
+  "description": "An applet for the Cosmic DE that displays current total RAM usage",
+  "repo": "https://github.com/samvv/cosmic-applet-ram-usage",
+  "developer": "samvv",
+  "created_at": "2025-05-27"
+}

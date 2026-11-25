@@ -1,0 +1,9 @@
+{
+  "category": "applets",
+  "name": "Orbit",
+  "description": "A native file shelf and panel applet for the COSMIC™ desktop.",
+  "repo": "https://github.com/motixo/orbit",
+  "icon": "https://raw.githubusercontent.com/motixo/orbit/HEAD/resources/icons/hicolor/scalable/apps/io.github.motixo.Orbit.svg",
+  "developer": "motixo",
+  "created_at": "2026-10-31"
+}

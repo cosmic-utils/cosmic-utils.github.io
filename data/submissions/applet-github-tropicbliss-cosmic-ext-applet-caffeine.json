@@ -1,0 +1,9 @@
+{
+  "category": "applets",
+  "name": "cosmic-ext-applet-caffeine",
+  "description": "Prevents your screen from going to sleep",
+  "repo": "https://github.com/tropicbliss/cosmic-ext-applet-caffeine",
+  "icon": "https://raw.githubusercontent.com/tropicbliss/cosmic-ext-applet-caffeine/HEAD/res/net.tropicbliss.CosmicExtAppletCaffeine-full.svg",
+  "developer": "tropicbliss",
+  "created_at": "2025-02-01"
+}

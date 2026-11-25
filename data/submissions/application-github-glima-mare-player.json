@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "Maré Player",
+  "description": "TIDAL music streaming for COSMIC™ — Hi-Res FLAC playback, spectrum visualizer, and MPRIS integration. Also builds as a panel applet.",
+  "repo": "https://github.com/glima/mare-player",
+  "icon": "https://raw.githubusercontent.com/glima/mare-player/refs/heads/main/resources/icon.svg",
+  "developer": "glima",
+  "created_at": "2026-03-08"
+}

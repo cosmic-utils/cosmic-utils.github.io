@@ -5,33 +5,58 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>{% block title %}{{ config.title }}{% endblock title %}</title>
 	<meta name="description" content="{{ config.description }}">
-	<link rel="icon" href="/favicon.ico">
+	<link rel="icon" type="image/svg+xml" href="/cosmic-orbit.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@400;600;700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+	<script src="/js/theme.js"></script>
 	<link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+	<a class="skip-link" href="#main-content">Skip to content</a>
 	<header class="site-header">
-		<a class="brand" href="/">
-			<img class="brand__mark brand__mark--light" src="/res/cosmic-mark-neutral.svg" alt="" width="28" height="24">
-			<img class="brand__mark brand__mark--dark" src="/res/cosmic-mark-white.svg" alt="" width="28" height="24">
-			<span>COSMIC Utils</span>
-		</a>
-		<nav>
-			<a href="/">Projects</a>
-			<a href="/contribute/">Contribute</a>
-			<a href="{{ config.extra.github_org }}">GitHub</a>
-		</nav>
+		<div class="layout header-inner">
+			<a class="brand" href="/">
+				<img src="/cosmic-orbit.svg" alt="" width="42" height="42">
+				<span>{{ config.title }}</span>
+			</a>
+			<nav aria-label="Main navigation">
+				<a href="/#projects">Projects</a>
+				<a href="/contribute/">Contribute</a>
+				<a class="github-link" href="{{ config.extra.github_org }}">GitHub</a>
+			</nav>
+			<details class="theme-control" hidden>
+				<summary aria-label="Color theme: System" title="Color theme">
+					<svg viewBox="0 0 24 24" aria-hidden="true">
+						<defs><g id="theme-system-icon"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M12 17v4m-4 0h8"/></g><g id="theme-light-icon"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42m0-14.14-1.42 1.42m-11.3 11.3-1.42 1.42"/></g><g id="theme-dark-icon"><path d="M20.6 15.2a8.9 8.9 0 0 1-11.8-11.8 9 9 0 1 0 11.8 11.8Z"/></g></defs>
+						<use class="theme-control__icon" href="#theme-system-icon"/>
+					</svg>
+				</summary>
+				<div class="theme-control__options" role="group" aria-label="Color theme">
+					<button type="button" data-theme-choice="system" title="System theme" aria-label="System" aria-pressed="true">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#theme-system-icon"/></svg>
+						<span>System</span>
+					</button>
+					<button type="button" data-theme-choice="light" title="Light theme" aria-label="Light" aria-pressed="false">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#theme-light-icon"/></svg>
+						<span>Light</span>
+					</button>
+					<button type="button" data-theme-choice="dark" title="Dark theme" aria-label="Dark" aria-pressed="false">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#theme-dark-icon"/></svg>
+						<span>Dark</span>
+					</button>
+				</div>
+			</details>
+		</div>
 	</header>
-
-	<main>
+	<main id="main-content">
 		{% block content %}{% endblock content %}
 	</main>
-
 	<footer class="site-footer">
-		<p>Community-built, not affiliated with System76. COSMIC™ is a trademark of System76, Inc.</p>
-		<p><a href="{{ config.extra.github_org }}">cosmic-utils on GitHub</a></p>
+		<div class="layout footer-inner">
+			<p>Independent community project. COSMIC™ is a trademark of System76, Inc.</p>
+			<a href="{{ config.extra.github_org }}">GitHub</a>
+		</div>
 	</footer>
 	<script src="/js/project-stars.js" defer></script>
 </body>

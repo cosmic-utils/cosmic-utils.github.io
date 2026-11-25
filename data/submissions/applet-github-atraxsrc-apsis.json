@@ -1,0 +1,9 @@
+{
+  "category": "applets",
+  "name": "Apsis",
+  "description": "System snapshot and restore",
+  "repo": "https://github.com/atraxsrc/apsis",
+  "icon": "https://raw.githubusercontent.com/atraxsrc/apsis/HEAD/resources/icons/hicolor/scalable/apps/io.github.atraxsrc.Apsis.svg",
+  "developer": "atraxsrc",
+  "created_at": "2026-09-25"
+}

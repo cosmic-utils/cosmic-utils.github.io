@@ -1,0 +1,9 @@
+{
+  "category": "applets",
+  "name": "cosmic-ext-flux",
+  "description": "Live wallpaper engine — play video and GIF files as your desktop background with GPU-accelerated decoding, multi-monitor support, and a panel applet for playback controls.",
+  "repo": "https://github.com/franz-net/cosmic-ext-flux",
+  "icon": "https://raw.githubusercontent.com/franz-net/cosmic-ext-flux/HEAD/applet/resources/icon.svg",
+  "developer": "franz-net",
+  "created_at": "2026-03-08"
+}

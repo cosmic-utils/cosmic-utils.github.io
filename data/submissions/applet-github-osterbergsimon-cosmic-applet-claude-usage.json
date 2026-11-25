@@ -1,0 +1,8 @@
+{
+  "category": "applets",
+  "name": "cosmic-applet-claude-usage",
+  "description": "Minimal panel applet showing Claude Code usage as a quiet, color-coded indicator",
+  "repo": "https://github.com/osterbergsimon/cosmic-applet-claude-usage",
+  "developer": "osterbergsimon",
+  "created_at": "2026-06-27"
+}

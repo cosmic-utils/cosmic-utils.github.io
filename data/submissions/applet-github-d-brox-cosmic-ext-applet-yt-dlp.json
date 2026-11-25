@@ -1,0 +1,8 @@
+{
+  "category": "applets",
+  "name": "cosmic-ext-applet-yt-dlp",
+  "description": "A simple yt-dlp GUI for the COSMIC DE",
+  "repo": "https://github.com/D-Brox/cosmic-ext-applet-yt-dlp",
+  "developer": "D-Brox",
+  "created_at": "2025-04-11"
+}

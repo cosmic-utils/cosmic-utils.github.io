@@ -1,0 +1,8 @@
+{
+  "category": "applets",
+  "name": "cosmic-connect",
+  "description": "KDE Connect panel applet for COSMIC™ — manage paired devices, send ping/ring, sync clipboard, share files/URLs/text, browse SFTP, SMS conversations, notification mirroring, media playback control, and file transfer progress",
+  "repo": "https://github.com/AceMythos/cosmic-connect",
+  "developer": "AceMythos",
+  "created_at": "2026-06-27"
+}

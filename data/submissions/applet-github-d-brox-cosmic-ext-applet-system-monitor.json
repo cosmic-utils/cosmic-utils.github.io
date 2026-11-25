@@ -1,0 +1,9 @@
+{
+  "category": "applets",
+  "name": "cosmic-ext-applet-system-monitor",
+  "description": "Configurable system monitor applet",
+  "repo": "https://github.com/D-Brox/cosmic-ext-applet-system-monitor",
+  "icon": "https://raw.githubusercontent.com/D-Brox/cosmic-ext-applet-system-monitor/HEAD/res/dev.DBrox.CosmicSystemMonitor.svg",
+  "developer": "D-Brox",
+  "created_at": "2024-08-31"
+}

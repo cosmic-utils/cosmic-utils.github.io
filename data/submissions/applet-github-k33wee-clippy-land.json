@@ -1,0 +1,9 @@
+{
+  "category": "applets",
+  "name": "clippy-land",
+  "description": "COSMIC panel applet for keeping a history of recently copied text and images",
+  "repo": "https://github.com/k33wee/clippy-land",
+  "icon": "https://raw.githubusercontent.com/k33wee/clippy-land/HEAD/resources/icon.svg",
+  "developer": "k33wee",
+  "created_at": "2026-01-28"
+}

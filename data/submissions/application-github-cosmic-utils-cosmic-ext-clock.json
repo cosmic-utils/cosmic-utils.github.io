@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "Clock",
+  "description": "A clock with alarms, timers, and a stopwatch for COSMIC desktops and Linux phones.",
+  "repo": "https://github.com/cosmic-utils/cosmic-ext-clock",
+  "icon": "https://raw.githubusercontent.com/cosmic-utils/cosmic-ext-clock/HEAD/resources/icons/hicolor/scalable/apps/org.cosmic_utils.clock.svg",
+  "developer": "cosmic-utils",
+  "created_at": "2026-09-28"
+}

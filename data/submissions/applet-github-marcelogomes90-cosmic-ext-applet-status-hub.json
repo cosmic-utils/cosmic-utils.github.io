@@ -1,0 +1,9 @@
+{
+  "category": "applets",
+  "name": "cosmic-ext-status-hub",
+  "description": "A standalone StatusNotifierItem tray for COSMIC with pinned items, multi-monitor consistency, COSMIC theme integration, app activation, and context menus in a compact panel applet.",
+  "repo": "https://github.com/marcelogomes90/cosmic-ext-applet-status-hub",
+  "icon": "https://raw.githubusercontent.com/marcelogomes90/cosmic-ext-applet-status-hub/HEAD/resources/io.github.marcelogomes90.cosmic-ext-applet-status-hub.svg",
+  "developer": "marcelogomes90",
+  "created_at": "2026-08-26"
+}

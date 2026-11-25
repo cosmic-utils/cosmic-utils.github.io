@@ -1,0 +1,8 @@
+{
+  "category": "scripts",
+  "name": "cosmic-ext-window-helper",
+  "description": "Utility interacting with COSMIC™ Wayland compositor to provide easy scriptable access to toplevel windows, allowing shortcut-triggerable custom actions: run-or-raise, batch hiding or closing...",
+  "repo": "https://github.com/lapause/cosmic-ext-window-helper",
+  "developer": "lapause",
+  "created_at": "2026-03-03"
+}
