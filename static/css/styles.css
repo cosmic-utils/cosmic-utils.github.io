@@ -159,6 +159,12 @@ body:has(.hero) .site-header { position: absolute; z-index: 2; inset: 0 0 auto; 
 .guide__toc li + li { margin-top: .35rem; }
 .guide__toc [aria-current="page"] { color: var(--text); font-weight: 700; }
 .guide__content.prose { width: 100%; min-width: 0; margin: 0; padding: 0; }
+.guide__snippet { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; margin-block: 1rem; min-width: 0; border: 1px solid var(--line); border-radius: .5rem; background: var(--surface); }
+.guide__snippet pre { grid-area: 1 / 1; margin: 0; border: 0; background: transparent; }
+.guide__snippet-toolbar { grid-area: 1 / 2; display: flex; justify-content: flex-end; align-items: center; gap: .5rem; padding: .4rem .4rem .4rem 0; font-size: .875rem; }
+.guide__copy { display: grid; place-items: center; width: 2rem; height: 2rem; padding: 0; border: 1px solid var(--line); border-radius: .4rem; color: var(--text); background: var(--surface); font: inherit; font-size: .875rem; cursor: pointer; }
+.guide__copy svg { width: 1rem; height: 1rem; }
+.guide__copy:hover { border-color: currentColor; }
 .guide__pagination { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); }
 .guide__next { margin-inline-start: auto; }
 
