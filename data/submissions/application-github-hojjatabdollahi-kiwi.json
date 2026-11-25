@@ -1,0 +1,8 @@
+{
+  "category": "applications",
+  "name": "Kiwi",
+  "description": "An input visualizer for COSMIC DE. Supports keyboard, mouse, touchpad, touchscreen, and drawing tablet.",
+  "repo": "https://github.com/hojjatabdollahi/kiwi",
+  "icon": "https://github.com/hojjatabdollahi/kiwi/raw/refs/heads/main/data/icons/kiwi-on.svg",
+  "developer": "Hojjat"
+}
