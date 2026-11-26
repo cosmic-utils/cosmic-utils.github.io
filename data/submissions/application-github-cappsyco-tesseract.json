@@ -1,0 +1,8 @@
+{
+  "category": "applications",
+  "name": "Tesseract",
+  "description": "A speed cubing timer, designed for simple yet effective solve timing.",
+  "repo": "https://github.com/cappsyco/tesseract",
+  "icon": "https://raw.githubusercontent.com/cappsyco/tesseract/refs/heads/main/resources/icons/hicolor/scalable/apps/icon.svg",
+  "developer": "Jonathan Capps"
+}
