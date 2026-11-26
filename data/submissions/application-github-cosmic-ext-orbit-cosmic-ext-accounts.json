@@ -3,6 +3,7 @@
   "name": "Accounts",
   "description": "A library for COSMIC online account management.",
   "repo": "https://github.com/cosmic-ext-orbit/cosmic-ext-accounts",
+  "icon": "https://raw.githubusercontent.com/cosmic-ext-orbit/cosmic-ext-accounts/refs/heads/main/assets/icon.svg",
   "developer": "Eduardo Flores",
   "created_at": "2024-10-05"
 }
