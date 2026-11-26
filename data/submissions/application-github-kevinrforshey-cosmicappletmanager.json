@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "COSMIC Applet Manager",
+  "description": "Browse, install, update and remove community COSMIC applets and extensions from this catalog. Builds them from source into ~/.local and tracks every file so removal is clean.",
+  "repo": "https://github.com/kevinRForshey/CosmicAppletManager",
+  "icon": "https://raw.githubusercontent.com/kevinRForshey/CosmicAppletManager/HEAD/res/io.github.kevinRForshey.CosmicAppletManager.svg",
+  "developer": "kevinRForshey",
+  "created_at": "2026-11-26"
+}
