@@ -3,7 +3,7 @@
   "name": "Stellarshot",
   "description": "A simple backup application using Restic/Rustic for the COSMIC™ desktop.",
   "repo": "https://github.com/cosmic-ext-orbit/stellarshot",
-  "icon": "https://raw.githubusercontent.com/cosmic-ext-orbit/stellarshot/HEAD/res/icons/hicolor/scalable/apps/com.github.cosmic-ext-orbit.Stellarshot.svg",
+  "icon": "https://raw.githubusercontent.com/cosmic-ext-orbit/stellarshot/HEAD/res/icons/hicolor/scalable/apps/com.github.cosmic-utils.Stellarshot.svg",
   "developer": "COSMIC Orbit Devs",
   "created_at": "2024-05-16"
 }

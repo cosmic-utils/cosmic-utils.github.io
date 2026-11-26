@@ -3,7 +3,7 @@
   "name": "Tweaks for COSMIC™",
   "description": " A tweaking tool for the COSMIC desktop.",
   "repo": "https://github.com/cosmic-ext-orbit/cosmic-ext-tweaks",
-  "icon": "https://raw.githubusercontent.com/cosmic-ext-orbit/tweaks/HEAD/res/icons/hicolor/scalable/apps/icon.svg",
+  "icon": "https://raw.githubusercontent.com/cosmic-ext-orbit/cosmic-ext-tweaks/HEAD/res/icons/hicolor/scalable/apps/icon.svg",
   "developer": "Eduardo Flores",
   "created_at": "2024-05-02"
 }

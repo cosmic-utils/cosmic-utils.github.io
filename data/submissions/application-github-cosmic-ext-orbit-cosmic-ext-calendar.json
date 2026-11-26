@@ -3,7 +3,7 @@
   "name": "Calendar",
   "description": "A calendar application for the COSMIC desktop",
   "repo": "https://github.com/cosmic-ext-orbit/cosmic-ext-calendar",
-  "icon": "https://raw.githubusercontent.com/cosmic-ext-orbit/calendar/HEAD/resources/icons/hicolor/scalable/apps/icon.svg",
+  "icon": "https://raw.githubusercontent.com/cosmic-ext-orbit/cosmic-ext-calendar/refs/heads/main/resources/icons/hicolor/scalable/apps/icon.svg",
   "developer": "Eduardo Flores",
   "created_at": "2025-09-26"
 }
