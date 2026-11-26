@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "COSMIC Extension Manager",
+  "description": "Browse, install, update and remove community COSMIC extensions from this catalog. Builds them from source into ~/.local and tracks every file so removal is clean.",
+  "repo": "https://github.com/kevinRForshey/CosmicExtensionManager",
+  "icon": "https://raw.githubusercontent.com/kevinRForshey/CosmicExtensionManager/HEAD/res/io.github.kevinRForshey.CosmicExtensionManager.svg",
+  "developer": "kevinRForshey",
+  "created_at": "2026-11-26"
+}
