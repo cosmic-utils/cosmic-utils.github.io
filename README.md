@@ -22,16 +22,6 @@ creation dates where available. The generated index is ignored by Git. CI create
 
 ## Network Setup
 
-The COSMIC Utils website is accessible via multiple domains:
-
-| Domain | Purpose |
-|--------|---------|
-| [cosmic-utils.org](https://cosmic-utils.org) | Primary domain (proxies to GitHub Pages) |
-| [cosmic-utilities.org](https://cosmic-utilities.org) | Redirects to cosmic-utils.org |
-| [cosmic-ext-orbit.github.io](https://cosmic-ext-orbit.github.io) | GitHub Pages (upstream) |
-
-All domains support HTTPS with automatic certificate management. The `www` subdomains redirect to their non-www counterparts.
-
 **Network Maintainer:** [@FreddyFunk](https://github.com/FreddyFunk)
 
 <!--
