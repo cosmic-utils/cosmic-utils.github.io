@@ -1,9 +1,0 @@
-{
-  "category": "applets",
-  "name": "Logo Menu",
-  "description": "A simple quick access 'Logo menu' to collect your launcher options in one place with the logo of your choice.",
-  "repo": "https://github.com/cosmic-utils/cosmic-ext-applet-logomenu",
-  "icon": "https://raw.githubusercontent.com/cosmic-utils/cosmic-ext-applet-logomenu/HEAD/res/icons/hicolor/scalable/apps/dev.cappsy.CosmicExtAppletLogoMenu.svg",
-  "developer": "cosmic-utils",
-  "created_at": "2025-05-04"
-}

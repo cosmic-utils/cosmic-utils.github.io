@@ -1,9 +1,0 @@
-{
-  "category": "applications",
-  "name": "Toot",
-  "description": "Mastodon client for COSMIC",
-  "repo": "https://github.com/cosmic-utils/cosmic-ext-momo",
-  "icon": "https://raw.githubusercontent.com/cosmic-utils/toot/HEAD/res/icons/hicolor/scalable/apps/icon.svg",
-  "developer": "Eduardo Flores",
-  "created_at": "2024-11-23"
-}

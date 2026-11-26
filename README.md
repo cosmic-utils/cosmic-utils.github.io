@@ -3,7 +3,7 @@
 This is not an official COSMIC™ Organization from System76. This is for hosting community applications and applets for the COSMIC™ Desktop.
 
 The site is built with [Zola](https://www.getzola.org/). Each catalog entry lives in its own
-JSON file under `data/submissions/`. The [Contribute page](https://cosmic-utils.github.io/contribute/)
+JSON file under `data/submissions/`. The [Contribute page](https://cosmic-ext-orbit.github.io/contribute/)
 prepares a pull request that adds one of these files.
 
 ## Building locally

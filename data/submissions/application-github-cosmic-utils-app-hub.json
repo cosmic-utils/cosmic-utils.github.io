@@ -1,9 +1,0 @@
-{
-  "category": "applications",
-  "name": "AppHub",
-  "description": "AppHub is a Linux desktop application that simplifies the installation and management of .appImage packages",
-  "repo": "https://github.com/cosmic-utils/app-hub",
-  "icon": "https://raw.githubusercontent.com/cosmic-utils/app-hub/HEAD/res/icons/hicolor/scalable/apps/com.francescogaglione.apphub.png",
-  "developer": "cosmic-utils",
-  "created_at": "2024-03-23"
-}

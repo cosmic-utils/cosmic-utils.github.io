@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "Noctua",
+  "description": "An image viewer application for the COSMIC™ desktop",
+  "repo": "https://github.com/cosmic-ext-orbit/noctua",
+  "icon": "https://raw.githubusercontent.com/cosmic-ext-orbit/noctua/HEAD/ui/cosmic/resources/icons/hicolor/scalable/apps/org.codeberg.wfx.Noctua.svg",
+  "developer": "COSMIC Orbit Devs",
+  "created_at": "2026-01-07"
+}

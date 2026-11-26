@@ -1,9 +1,0 @@
-{
-  "category": "applications",
-  "name": "Noctua",
-  "description": "An image viewer application for the COSMIC™ desktop",
-  "repo": "https://github.com/cosmic-utils/noctua",
-  "icon": "https://raw.githubusercontent.com/cosmic-utils/noctua/HEAD/ui/cosmic/resources/icons/hicolor/scalable/apps/org.codeberg.wfx.Noctua.svg",
-  "developer": "cosmic-utils",
-  "created_at": "2026-01-07"
-}

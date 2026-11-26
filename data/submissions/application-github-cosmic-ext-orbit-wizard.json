@@ -1,0 +1,8 @@
+{
+  "category": "applications",
+  "name": "Wizard",
+  "description": "Deb packages installer made with magic for the COSMIC™ desktop!",
+  "repo": "https://github.com/cosmic-ext-orbit/wizard",
+  "developer": "COSMIC Orbit Devs",
+  "created_at": "2024-09-05"
+}

@@ -1,9 +1,0 @@
-{
-  "category": "applications",
-  "name": "Configurator",
-  "description": "dconf alternative",
-  "repo": "https://github.com/cosmic-utils/configurator",
-  "icon": "https://raw.githubusercontent.com/cosmic-utils/configurator/HEAD/res/app_icon.svg",
-  "developer": "cosmic-utils",
-  "created_at": "2024-10-18"
-}

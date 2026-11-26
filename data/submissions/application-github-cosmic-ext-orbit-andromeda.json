@@ -1,0 +1,8 @@
+{
+  "category": "applications",
+  "name": "Andromeda",
+  "description": "Disk management utility for the COSMIC™ desktop environment",
+  "repo": "https://github.com/cosmic-ext-orbit/andromeda",
+  "developer": "COSMIC Orbit Devs",
+  "created_at": "2024-12-16"
+}

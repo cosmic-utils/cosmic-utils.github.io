@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "Tasks",
+  "description": "A simple task management application for the COSMIC desktop.",
+  "repo": "https://github.com/cosmic-ext-orbit/cosmic-ext-tasks",
+  "icon": "https://raw.githubusercontent.com/edfloreshz/tasks/HEAD/res/icons/hicolor/scalable/apps/dev.edfloreshz.Tasks.svg",
+  "developer": "Eduardo Flores",
+  "created_at": "2024-03-02"
+}

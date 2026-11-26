@@ -1,8 +1,0 @@
-{
-  "category": "applications",
-  "name": "GitHub Notifications",
-  "description": "A GitHub notifications applet for the COSMIC desktop",
-  "repo": "https://github.com/cosmic-utils/cosmic-ext-gh-notifications",
-  "developer": "Eduardo Flores",
-  "created_at": "2025-10-04"
-}

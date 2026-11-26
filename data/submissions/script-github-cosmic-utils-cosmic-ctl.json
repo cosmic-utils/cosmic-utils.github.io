@@ -1,8 +1,0 @@
-{
-  "category": "scripts",
-  "name": "cosmic-ctl",
-  "description": "Manage and back up COSMIC Desktop settings from the command line.",
-  "repo": "https://github.com/cosmic-utils/cosmic-ctl",
-  "developer": "cosmic-utils",
-  "created_at": "2024-11-11"
-}

@@ -1,9 +1,0 @@
-{
-  "category": "applets",
-  "name": "clipboard-manager",
-  "description": "Clipboard manager for COSMIC™",
-  "repo": "https://github.com/cosmic-utils/clipboard-manager",
-  "icon": "https://raw.githubusercontent.com/cosmic-utils/clipboard-manager/HEAD/res/app_icon.svg",
-  "developer": "cosmic-utils",
-  "created_at": "2024-03-18"
-}

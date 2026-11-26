@@ -1,10 +1,10 @@
 title = "COSMIC Orbit"
 description = "Discover community-built apps, applets, themes, and more for the COSMIC™ Desktop."
-base_url = "https://cosmic-utils.github.io"
+base_url = "https://cosmic-ext-orbit.github.io"
 compile_sass = false
 build_search_index = false
 generate_feeds = false
 
 [extra]
-github_org = "https://github.com/cosmic-utils"
-github_submission_editor = "https://github.com/cosmic-utils/cosmic-utils.github.io/new/main/data/submissions"
+github_org = "https://github.com/cosmic-ext-orbit"
+github_submission_editor = "https://github.com/cosmic-ext-orbit/cosmic-ext-orbit.github.io/new/main/data/submissions"

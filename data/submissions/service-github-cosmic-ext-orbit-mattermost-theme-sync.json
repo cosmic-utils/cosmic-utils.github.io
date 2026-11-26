@@ -1,0 +1,8 @@
+{
+  "category": "services",
+  "name": "Mattermost Theme Sync",
+  "description": "Keep your Mattermost theme in sync with your COSMIC theme.",
+  "repo": "https://github.com/cosmic-ext-orbit/mattermost-theme-sync",
+  "developer": "Eduardo Flores",
+  "created_at": "2026-11-13"
+}

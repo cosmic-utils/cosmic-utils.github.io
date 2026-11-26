@@ -1,8 +1,0 @@
-{
-  "category": "applets",
-  "name": "cosmic-ext-applet-nixos-update",
-  "description": "",
-  "repo": "https://github.com/cosmic-utils/cosmic-ext-applet-nixos-update",
-  "developer": "cosmic-utils",
-  "created_at": "2025-03-25"
-}

@@ -1,8 +1,0 @@
-{
-  "category": "applications",
-  "name": "Wizard",
-  "description": "Deb packages installer made with magic for the COSMIC™ desktop!",
-  "repo": "https://github.com/cosmic-utils/wizard",
-  "developer": "cosmic-utils",
-  "created_at": "2024-09-05"
-}

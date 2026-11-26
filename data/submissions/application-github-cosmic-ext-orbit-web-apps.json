@@ -1,0 +1,9 @@
+{
+  "category": "applications",
+  "name": "Web Apps",
+  "description": "Web App Manager for Cosmic desktop written with love and libcosmic. Allow you to simply create web applications from given url working inside separate window of your browser of choice.",
+  "repo": "https://github.com/cosmic-ext-orbit/web-apps",
+  "icon": "https://raw.githubusercontent.com/cosmic-ext-orbit/web-apps/HEAD/resources/icons/hicolor/128x128/apps/dev.heppen.webapps.png",
+  "developer": "COSMIC Orbit Devs",
+  "created_at": "2023-12-25"
+}

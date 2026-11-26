@@ -1,9 +1,0 @@
-{
-  "category": "applets",
-  "name": "cosmic-ext-applet-pomodoro",
-  "description": "A pomodoro timer applet for the COSMIC desktop",
-  "repo": "https://github.com/cosmic-utils/cosmic-ext-applet-pomodoro",
-  "icon": "https://raw.githubusercontent.com/cosmic-utils/cosmic-ext-applet-pomodoro/HEAD/resources/icon.svg",
-  "developer": "cosmic-utils",
-  "created_at": "2026-03-07"
-}

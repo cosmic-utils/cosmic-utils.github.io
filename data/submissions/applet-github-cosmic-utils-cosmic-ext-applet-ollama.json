@@ -1,8 +1,0 @@
-{
-  "category": "applets",
-  "name": "cosmic-applet-ollama",
-  "description": "Applet for Ollama",
-  "repo": "https://github.com/cosmic-utils/cosmic-ext-applet-ollama",
-  "developer": "cosmic-utils",
-  "created_at": "2024-05-19"
-}
