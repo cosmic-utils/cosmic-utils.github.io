@@ -1,6 +1,6 @@
 +++
 title = "Publishing and submission"
-weight = 4
+weight = 5
 +++
 
 Submit standalone desktop apps to **Flathub**. Submit Panel and Dock applets to System76’s **COSMIC Flatpak** repository. Both routes start with a working Flatpak manifest, and both are separate from listing a project in COSMIC Orbit. [libcosmic publishing guidance](https://github.com/pop-os/libcosmic#publishing)

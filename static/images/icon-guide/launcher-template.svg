@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="128" height="128" viewBox="0 0 128 128">
+
+  <defs>
+    <linearGradient id="dial-shading" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff6df"/>
+      <stop offset="1" stop-color="#dfc395"/>
+    </linearGradient>
+  </defs>
+
+  <g id="silhouette" inkscape:groupmode="layer" inkscape:label="Silhouette">
+    <circle cx="64" cy="64" r="47" fill="url(#dial-shading)" stroke="#996c39" stroke-width="6"/>
+  </g>
+
+  <g id="main-detail" inkscape:groupmode="layer" inkscape:label="Main detail">
+    <path d="M64 26v9m38 29h-9m-29 38v-9m-38-29h9"
+          fill="none" stroke="#795536" stroke-width="4" stroke-linecap="round"/>
+    <path d="M91 37 72 72 37 91 56 56Z" fill="#354858"/>
+    <path d="M91 37 72 72 56 56Z" fill="#c33f43"/>
+    <circle cx="64" cy="64" r="4" fill="#fff0ce"/>
+  </g>
+</svg>

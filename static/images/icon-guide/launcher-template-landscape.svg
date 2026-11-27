@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="128" height="128" viewBox="0 0 128 128">
+
+  <defs>
+    <linearGradient id="screen-shading" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#62476e"/>
+      <stop offset="1" stop-color="#30223e"/>
+    </linearGradient>
+  </defs>
+
+  <g id="silhouette" inkscape:groupmode="layer" inkscape:label="Silhouette">
+    <rect x="13" y="27" width="102" height="74" rx="12" fill="url(#screen-shading)" stroke="#c7acd8" stroke-width="8"/>
+  </g>
+
+  <g id="main-detail" inkscape:groupmode="layer" inkscape:label="Main detail">
+    <path d="M28 62v4m12-9v14m12-21v28m12-34v40m12-32v24m12-19v14m12-9v4"
+          fill="none" stroke="#ffaed5" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</svg>
