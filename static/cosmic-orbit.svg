@@ -37,6 +37,13 @@
     <circle cx="246" cy="244" r="202" fill="url(#frame)"/>
     <g clip-path="url(#lens)">
       <rect x="78" y="76" width="336" height="336" fill="url(#core)"/>
+      <g class="orbit-stars" fill="#FFF">
+        <circle cx="128" cy="187" r="3"/><circle cx="179" cy="136" r="3.5"/>
+        <circle cx="286" cy="139" r="3"/><circle cx="339" cy="175" r="3.5"/>
+        <circle cx="122" cy="264" r="3"/><circle cx="293" cy="273" r="2.5"/>
+        <circle cx="192" cy="350" r="3"/><circle cx="261" cy="331" r="3.5"/>
+        <circle cx="314" cy="319" r="2.5"/><circle cx="147" cy="346" r="2.5"/>
+      </g>
       <g fill="none">
         <g class="orbit orbit-outer">
         <g transform="translate(246 244) scale(0.919310345) translate(-246 -244)">
@@ -70,11 +77,6 @@
         </g>
       </g>
       <g fill="#FFF">
-        <circle cx="128" cy="187" r="3"/><circle cx="179" cy="136" r="3.5"/>
-        <circle cx="286" cy="139" r="3"/><circle cx="339" cy="175" r="3.5"/>
-        <circle cx="122" cy="264" r="3"/><circle cx="293" cy="273" r="2.5"/>
-        <circle cx="192" cy="350" r="3"/><circle cx="261" cy="331" r="3.5"/>
-        <circle cx="314" cy="319" r="2.5"/><circle cx="147" cy="346" r="2.5"/>
         <circle cx="246" cy="244" r="33" fill="#333353" stroke="#D0C5F3" stroke-width="3"/>
         <!-- System76's original COSMIC white + gradient mark, uniformly scaled. -->
         <g transform="translate(246 244) rotate(10) scale(.23 -.23) translate(-198.275 -169.718)">

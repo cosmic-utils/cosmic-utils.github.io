@@ -90,6 +90,7 @@ body:has(.hero) .site-header { position: absolute; z-index: 2; inset: 0 0 auto; 
 	.hero-art .orbit { transform-box: view-box; transform-origin: 246px 244px; animation: orbit-revolve 36s linear infinite; }
 	.hero-art .orbit-middle { animation-duration: 26s; }
 	.hero-art .orbit-inner { animation-duration: 18s; }
+	.hero-art .orbit-stars { transform-box: view-box; transform-origin: 246px 244px; animation: orbit-revolve 240s linear infinite reverse; }
 }
 
 .catalog { padding-block: 3.5rem 4.5rem; }
