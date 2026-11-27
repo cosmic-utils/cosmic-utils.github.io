@@ -38,6 +38,7 @@
     <g clip-path="url(#lens)">
       <rect x="78" y="76" width="336" height="336" fill="url(#core)"/>
       <g fill="none">
+        <g class="orbit orbit-outer">
         <g transform="translate(246 244) scale(0.919310345) translate(-246 -244)">
           <path d="M148.976 351.756C114.880 321.055 97.326 276.031 101.644 230.354" stroke="url(#trail-0-0)" stroke-width="4.35109"/>
           <path d="M101.644 230.354C105.961 184.678 131.642 143.739 170.886 119.971" stroke="url(#trail-0-1)" stroke-width="4.35109"/>
@@ -46,6 +47,8 @@
           <path d="M386.445 207.940C397.855 252.379 387.560 299.595 358.686 335.252" stroke="url(#trail-0-4)" stroke-width="4.35109"/>
           <circle cx="358.686" cy="335.252" r="7.61440" fill="#91DCE0"/>
         </g>
+        </g>
+        <g class="orbit orbit-middle">
         <g transform="translate(246 244) scale(0.880530973) translate(-246 -244)">
           <path d="M226.378 132.716C261.316 126.556 297.119 137.162 323.066 161.356" stroke="url(#trail-1-0)" stroke-width="4.76985"/>
           <path d="M323.066 161.356C349.012 185.553 362.089 220.530 358.381 255.812" stroke="url(#trail-1-1)" stroke-width="4.76985"/>
@@ -54,6 +57,8 @@
           <path d="M203.669 348.772C170.775 335.482 146.033 307.515 136.850 273.246" stroke="url(#trail-1-4)" stroke-width="4.76985"/>
           <circle cx="136.850" cy="273.246" r="7.94975" fill="#BEA0EE"/>
         </g>
+        </g>
+        <g class="orbit orbit-inner">
         <g transform="translate(246 244) scale(0.856493506) translate(-246 -244)">
           <path d="M312.684 282.500C300.123 304.257 277.738 318.518 252.711 320.706" stroke="url(#trail-2-0)" stroke-width="4.08643"/>
           <path d="M252.711 320.706C227.684 322.896 203.163 312.740 187.015 293.495" stroke="url(#trail-2-1)" stroke-width="4.08643"/>
@@ -61,6 +66,7 @@
           <path d="M171.624 224.071C178.126 199.804 196.057 180.237 219.664 171.643" stroke="url(#trail-2-3)" stroke-width="4.08643"/>
           <path d="M219.664 171.643C243.272 163.052 269.586 166.517 290.165 180.924" stroke="url(#trail-2-4)" stroke-width="4.08643"/>
           <circle cx="290.165" cy="180.924" r="6.42153" fill="#86CCDB"/>
+        </g>
         </g>
       </g>
       <g fill="#FFF">
